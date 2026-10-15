@@ -1,22 +1,23 @@
 <title>Content Runway</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     color-scheme: dark;
-    --bg: #0D1117;
-    --surface: #121821;
-    --surface-raised: #161D27;
-    --border: #232B36;
-    --border-soft: #1B222B;
-    --cyan: #38BDF8;
-    --green: #4ADE80;
+    --bg: #050705;
+    --surface: #0B100B;
+    --surface-raised: #111A11;
+    --border: rgba(255,255,255,0.1);
+    --border-soft: rgba(255,255,255,0.07);
+    --green: #12E068;
+    --mint: #2CF982;
+    --mint-light: #5CFFA1;
     --amber: #FB923C;
     --red: #F87171;
-    --text: #F8FAFC;
-    --text-dim: #94A3B8;
-    --text-faint: #5B6675;
+    --text: #FFFFFF;
+    --text-dim: rgba(255,255,255,0.56);
+    --text-faint: rgba(255,255,255,0.38);
     --radius: 14px;
   }
 
@@ -24,7 +25,7 @@
   body{
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", -apple-system, sans-serif;
+    font-family: "Geist", -apple-system, sans-serif;
     padding-inline: 20px;
     padding-block: 36px;
     display: flex;
@@ -33,25 +34,24 @@
   .page{ width: 100%; max-width: 920px; display: flex; flex-direction: column; gap: 32px; }
 
   /* header */
-  .wordmark{ display:inline-flex; align-items:baseline; gap:2px; font-family:"Space Grotesk", sans-serif; font-weight:700; font-size: 26px; }
-  .wordmark .prompt{ color: var(--green); font-family:"JetBrains Mono", monospace; font-size: 22px; margin-right: 6px; }
-  .wordmark .vps{ color: var(--cyan); }
+  .wordmark{ display:inline-flex; align-items:baseline; gap:1px; font-family:"Geist", sans-serif; font-weight:700; font-size: 26px; }
+  .wordmark .vps{ color: var(--mint); }
 
   .masthead{ display:flex; flex-direction:column; gap: 6px; }
-  .eyebrow{ font-family:"JetBrains Mono", monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
-  h1{ font-family:"Space Grotesk", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; margin: 0; }
+  .eyebrow{ font-family:"Geist Mono", monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  h1{ font-family:"Geist", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; margin: 0; }
   .sub{ color: var(--text-dim); font-size: 15px; line-height: 1.5; max-width: 60ch; }
 
   /* stat strip */
   .stats{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .stat{ background: var(--surface); padding: 18px 16px; display:flex; flex-direction:column; gap: 4px; }
-  .stat-num{ font-family:"Space Grotesk", sans-serif; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; }
-  .stat-label{ font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
-  .stat.c-cyan .stat-num{ color: var(--cyan); }
+  .stat-num{ font-family:"Geist", sans-serif; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; }
+  .stat-label{ font-family:"Geist Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+  .stat.c-cyan .stat-num{ color: var(--mint-light); }
   .stat.c-amber .stat-num{ color: var(--amber); }
   .stat.c-green .stat-num{ color: var(--green); }
 
-  .viewer-note{ font-size: 13px; color: var(--text-faint); font-family:"JetBrains Mono", monospace; }
+  .viewer-note{ font-size: 13px; color: var(--text-faint); font-family:"Geist Mono", monospace; }
   .viewer-note.hide{ display:none; }
 
   /* day cards */
@@ -65,35 +65,35 @@
   }
   .card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap: 16px; flex-wrap: wrap; }
   .day-id{ display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap; }
-  .day-num{ font-family:"JetBrains Mono", monospace; color: var(--text-faint); font-size: 13px; }
-  .day-date{ font-family:"JetBrains Mono", monospace; color: var(--text-dim); font-size: 13px; }
+  .day-num{ font-family:"Geist Mono", monospace; color: var(--text-faint); font-size: 13px; }
+  .day-date{ font-family:"Geist Mono", monospace; color: var(--text-dim); font-size: 13px; }
 
-  .badge{ display:inline-flex; align-items:center; gap: 7px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-raised); font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; width: fit-content; }
+  .badge{ display:inline-flex; align-items:center; gap: 7px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-raised); font-family:"Geist Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; width: fit-content; }
   .badge .dot{ width: 7px; height: 7px; border-radius: 50%; }
-  .badge.pillar-tips{ color: var(--cyan); } .badge.pillar-tips .dot{ background: var(--cyan); }
+  .badge.pillar-tips{ color: var(--mint-light); } .badge.pillar-tips .dot{ background: var(--mint-light); }
   .badge.pillar-promo{ color: var(--amber); } .badge.pillar-promo .dot{ background: var(--amber); }
   .badge.pillar-stats{ color: var(--green); } .badge.pillar-stats .dot{ background: var(--green); }
-  .badge.pillar-testimonial{ color: var(--green); } .badge.pillar-testimonial .dot{ background: var(--green); }
-  .badge.pillar-fact{ color: var(--cyan); } .badge.pillar-fact .dot{ background: var(--cyan); }
+  .badge.pillar-testimonial{ color: var(--mint); } .badge.pillar-testimonial .dot{ background: var(--mint); }
+  .badge.pillar-fact{ color: var(--mint-light); } .badge.pillar-fact .dot{ background: var(--mint-light); }
 
-  .status-chip{ display:inline-flex; align-items:center; gap: 7px; padding: 6px 13px; border-radius: 999px; font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .status-chip{ display:inline-flex; align-items:center; gap: 7px; padding: 6px 13px; border-radius: 999px; font-family:"Geist Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
   .status-chip .dot{ width: 7px; height: 7px; border-radius: 50%; }
   .status-draft{ color: var(--text-faint); background: var(--surface-raised); border: 1px solid var(--border); }
   .status-draft .dot{ background: var(--text-faint); }
-  .status-ready_for_review{ color: var(--cyan); background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); }
-  .status-ready_for_review .dot{ background: var(--cyan); }
-  .status-approved{ color: var(--green); background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); }
+  .status-ready_for_review{ color: var(--mint-light); background: rgba(92,255,161,0.1); border: 1px solid rgba(92,255,161,0.3); }
+  .status-ready_for_review .dot{ background: var(--mint-light); }
+  .status-approved{ color: var(--green); background: rgba(18,224,104,0.1); border: 1px solid rgba(18,224,104,0.3); }
   .status-approved .dot{ background: var(--green); }
   .status-needs_changes{ color: var(--amber); background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.3); }
   .status-needs_changes .dot{ background: var(--amber); }
   .status-posted{ color: var(--text); background: rgba(248,250,252,0.08); border: 1px solid var(--border); }
   .status-posted .dot{ background: var(--text); }
 
-  .topic{ font-family:"Space Grotesk", sans-serif; font-weight: 600; font-size: 20px; line-height: 1.35; text-wrap: balance; margin: 0; }
+  .topic{ font-family:"Geist", sans-serif; font-weight: 600; font-size: 20px; line-height: 1.35; text-wrap: balance; margin: 0; }
 
   .thumbs{ display:flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
   .thumbs img{ height: 150px; width: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); flex-shrink: 0; }
-  .pending-note{ font-family:"JetBrains Mono", monospace; font-size: 12px; color: var(--text-faint); background: var(--surface-raised); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; }
+  .pending-note{ font-family:"Geist Mono", monospace; font-size: 12px; color: var(--text-faint); background: var(--surface-raised); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; }
 
   details.caption{ border-top: 1px solid var(--border-soft); padding-top: 12px; }
   details.caption summary{ cursor: pointer; font-size: 13px; color: var(--text-dim); font-weight: 500; list-style: none; display:flex; align-items:center; gap: 6px; }
@@ -105,15 +105,15 @@
   .breakdown-body{ margin-top: 10px; font-size: 13px; line-height: 1.6; color: var(--text-faint); max-width: 70ch; }
 
   .card-actions{ display:flex; gap: 10px; align-items:center; flex-wrap: wrap; }
-  .btn{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 13px; padding: 9px 16px; border-radius: 9px; border: 1px solid transparent; cursor: pointer; display:inline-flex; align-items:center; gap: 6px; transition: opacity 0.12s ease; }
+  .btn{ font-family:"Geist", sans-serif; font-weight: 600; font-size: 13px; padding: 9px 16px; border-radius: 9px; border: 1px solid transparent; cursor: pointer; display:inline-flex; align-items:center; gap: 6px; transition: opacity 0.12s ease; }
   .btn:hover{ opacity: 0.85; }
   .btn:disabled{ opacity: 0.4; cursor: default; }
-  .btn-approve{ background: var(--green); color: #06260F; }
+  .btn-approve{ background: var(--green); color: #000000; }
   .btn-changes{ background: transparent; color: var(--amber); border-color: rgba(251,146,60,0.4); }
   .btn-reset{ background: transparent; color: var(--text-faint); border-color: var(--border); }
-  .action-note{ font-size: 12px; color: var(--text-faint); font-family:"JetBrains Mono", monospace; }
+  .action-note{ font-size: 12px; color: var(--text-faint); font-family:"Geist Mono", monospace; }
 
-  .empty{ text-align:center; padding: 40px 0; color: var(--text-faint); font-family:"JetBrains Mono", monospace; font-size: 13px; }
+  .empty{ text-align:center; padding: 40px 0; color: var(--text-faint); font-family:"Geist Mono", monospace; font-size: 13px; }
 
   @media (max-width: 560px){
     .stats{ grid-template-columns: repeat(2, 1fr); }
@@ -123,7 +123,7 @@
 
 <div class="page">
   <div class="masthead">
-    <div class="wordmark"><span class="prompt">&gt;_</span><span>Margin</span><span class="vps">VPS</span></div>
+    <div class="wordmark"><span>Margin</span><span class="vps">VPS</span></div>
     <div class="eyebrow">Instagram content runway</div>
     <h1>14-day posting plan</h1>
     <div class="sub">Everything below is drafted and waiting on you. Approve a day to clear it for scheduling, or flag it for changes — nothing posts until you approve it.</div>
