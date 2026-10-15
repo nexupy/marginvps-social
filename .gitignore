@@ -1,1 +1,6 @@
 .env
+.env.tmp
+logs/
+scripts/.tmp/
+content/schedule.json
+__pycache__/
