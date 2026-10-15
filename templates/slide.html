@@ -5,37 +5,31 @@
 <title>MarginVPS Slide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0D1117;
-    --bg-raised: #161B22;
-    --grid-line: #1E2630;
-    --cyan: #38BDF8;
-    --green: #4ADE80;
-    --amber: #FB923C;
-    --text: #F8FAFC;
-    --text-dim: #94A3B8;
-    --border: #2D3643;
+    --bg: #050705;
+    --bg-raised: #0B100B;
+    --hairline: rgba(255,255,255,0.1);
+    --green: #12E068;
+    --mint: #2CF982;
+    --mint-light: #5CFFA1;
+    --text: #FFFFFF;
+    --text-dim: rgba(255,255,255,0.56);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html,body{width:1080px; height:1350px; overflow:hidden;}
   body{
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", Arial, sans-serif;
+    font-family: "Geist", Arial, sans-serif;
     position: relative;
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 54px 54px;
-    background-position: -1px -1px;
   }
   body::before{
     content:"";
     position:absolute; inset:0;
-    background: radial-gradient(circle at 85% 8%, rgba(56,189,248,0.16), transparent 55%),
-                radial-gradient(circle at 10% 95%, rgba(74,222,128,0.10), transparent 50%);
+    background: radial-gradient(circle at 88% 6%, rgba(18,224,104,0.14), transparent 55%),
+                radial-gradient(circle at 6% 96%, rgba(44,249,130,0.08), transparent 50%);
     pointer-events:none;
   }
   .frame{
@@ -47,122 +41,129 @@
 
   /* wordmark */
   .wordmark{
-    display:inline-flex; align-items:baseline; gap:2px;
-    font-family:"Space Grotesk", Arial, sans-serif;
+    display:inline-flex; align-items:baseline; gap:1px;
+    font-family:"Geist", Arial, sans-serif;
     font-weight:700; font-size:34px; letter-spacing:-0.01em;
   }
-  .wordmark .prompt{ color:var(--green); font-family:"JetBrains Mono", monospace; font-size:30px; margin-right:8px; }
   .wordmark .margin{ color:var(--text); }
-  .wordmark .vps{ color:var(--cyan); }
+  .wordmark .vps{ color:var(--mint); }
 
-  /* pillar badge */
+  /* pillar badge — mirrors the site's latency-pill look */
   .badge{
     display:inline-flex; align-items:center; gap:10px;
-    padding: 10px 20px;
+    padding: 9px 20px;
     border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--bg-raised);
-    font-family:"JetBrains Mono", monospace;
-    font-size: 22px; letter-spacing: 0.08em;
+    border: 1px solid color-mix(in srgb, var(--badge-color, var(--mint-light)) 45%, transparent);
+    background: color-mix(in srgb, var(--badge-color, var(--mint-light)) 10%, transparent);
+    font-family:"Geist Mono", monospace;
+    font-size: 21px; letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--badge-color, var(--cyan));
+    color: var(--badge-color, var(--mint-light));
     width: fit-content;
   }
-  .badge .dot{ width:10px; height:10px; border-radius:50%; background:var(--badge-color, var(--cyan)); }
+  .badge .dot{ width:8px; height:8px; border-radius:50%; background:var(--badge-color, var(--mint-light)); }
 
   .topbar{ display:flex; justify-content:space-between; align-items:flex-start; }
-  .pager{ font-family:"JetBrains Mono", monospace; color:var(--text-dim); font-size:24px; }
+  .pager{ font-family:"Geist Mono", monospace; color:var(--text-dim); font-size:24px; }
 
   .headline{
-    font-family:"Space Grotesk", Arial, sans-serif;
+    font-family:"Geist", Arial, sans-serif;
     font-weight:700;
     font-size: 72px;
     line-height: 1.08;
-    letter-spacing:-0.01em;
+    letter-spacing:-0.02em;
     color: var(--text);
   }
-  .headline .accent{ color: var(--badge-color, var(--cyan)); }
+  .headline .accent{ color: var(--badge-color, var(--mint-light)); }
 
   .sub{
     font-size: 32px;
     line-height: 1.45;
     color: var(--text-dim);
     max-width: 92%;
+    font-weight: 500;
   }
 
-  /* content slide list */
+  /* numbered step list */
   .list{ display:flex; flex-direction:column; gap:28px; }
   .list-item{
     display:flex; gap:22px; align-items:flex-start;
     font-size: 34px; line-height:1.4; color: var(--text);
+    font-weight: 500;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--hairline);
   }
+  .list-item:last-child{ border-bottom: none; }
   .list-item .num{
-    font-family:"JetBrains Mono", monospace;
-    color: var(--badge-color, var(--cyan));
+    font-family:"Geist Mono", monospace;
+    color: var(--badge-color, var(--mint-light));
     font-size: 30px; font-weight:500;
     flex-shrink:0; padding-top:4px;
   }
 
-  /* terminal window motif */
-  .terminal{
+  /* label/value row list — broker latency, feature checklists, comparisons */
+  .rows{ display:flex; flex-direction:column; }
+  .row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .row:last-child{ border-bottom:none; }
+  .row .label{ font-size: 32px; font-weight:600; color: var(--text); }
+  .row .label .meta{ display:block; font-size:22px; color:var(--text-dim); font-weight:500; margin-top:4px; font-family:"Geist Mono", monospace; }
+  .row .value{
+    font-family:"Geist Mono", monospace;
+    font-size: 26px; font-weight:500;
+    color: var(--mint-light);
+    background: rgba(44,249,130,0.1);
+    border: 1px solid rgba(44,249,130,0.35);
+    border-radius: 999px;
+    padding: 10px 22px;
+  }
+
+  /* card grid, dark hairline-bordered card */
+  .card{
     background: var(--bg-raised);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow:hidden;
-    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 36px 38px;
   }
-  .terminal .bar{
-    display:flex; align-items:center; gap:10px;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border);
-  }
-  .terminal .bar span{ width:14px; height:14px; border-radius:50%; display:inline-block; }
-  .terminal .bar span:nth-child(1){ background:#FB5B5B; }
-  .terminal .bar span:nth-child(2){ background:#F6C343; }
-  .terminal .bar span:nth-child(3){ background:#4ADE80; }
-  .terminal .body{
-    padding: 28px 30px;
-    font-family:"JetBrains Mono", monospace;
-    font-size: 26px; line-height:1.7;
-    color: var(--green);
-  }
-  .terminal .body .c-dim{ color: var(--text-dim); }
-  .terminal .body .c-cyan{ color: var(--cyan); }
 
   /* stat slide */
   .stat-wrap{ display:flex; flex-direction:column; align-items:flex-start; gap:18px; }
   .stat-number{
-    font-family:"Space Grotesk", Arial, sans-serif;
+    font-family:"Geist", Arial, sans-serif;
     font-weight:700;
     font-size: 220px;
     line-height: 0.95;
-    color: var(--badge-color, var(--cyan));
+    color: var(--badge-color, var(--mint-light));
     letter-spacing:-0.02em;
   }
   .stat-label{
     font-size: 36px;
     color: var(--text);
-    font-weight:500;
+    font-weight:600;
   }
   .stat-context{
     font-size: 28px;
     color: var(--text-dim);
     max-width: 85%;
+    font-weight: 500;
   }
 
   /* testimonial slide */
   .quote-mark{
-    font-family:"Space Grotesk", Arial, sans-serif;
+    font-family:"Geist", Arial, sans-serif;
     font-size: 140px;
-    color: var(--badge-color, var(--cyan));
+    color: var(--badge-color, var(--mint-light));
     line-height: 0.6;
     opacity:0.85;
   }
   .quote-text{
-    font-family:"Space Grotesk", Arial, sans-serif;
-    font-weight:500;
-    font-size: 54px;
-    line-height: 1.3;
+    font-family:"Geist", Arial, sans-serif;
+    font-weight:600;
+    font-size: 52px;
+    line-height: 1.32;
     letter-spacing:-0.01em;
     color: var(--text);
   }
@@ -172,12 +173,12 @@
   }
   .attribution .avatar{
     width:56px; height:56px; border-radius:50%;
-    background: linear-gradient(135deg, var(--cyan), var(--green));
+    background: linear-gradient(135deg, var(--green), var(--mint));
     display:flex; align-items:center; justify-content:center;
-    font-family:"Space Grotesk", Arial, sans-serif; font-weight:700; color:#0D1117; font-size:24px;
+    font-family:"Geist", Arial, sans-serif; font-weight:700; color:#050705; font-size:24px;
   }
   .attribution .name{ font-size:26px; color:var(--text); font-weight:600; }
-  .attribution .role{ font-size:22px; color:var(--text-dim); }
+  .attribution .role{ font-size:22px; color:var(--text-dim); font-weight:500; }
 
   /* cta slide */
   .cta-wrap{
@@ -185,38 +186,26 @@
     display:flex; flex-direction:column; align-items:center; justify-content:center;
     text-align:center; gap:26px;
   }
-  .cta-wordmark{
-    font-family:"Space Grotesk", Arial, sans-serif;
-    font-weight:700; font-size: 58px;
-  }
-  .cta-tagline{ font-size: 32px; color:var(--text-dim); max-width:80%; }
+  .cta-tagline{ font-size: 32px; color:var(--text-dim); max-width:80%; font-weight:500; }
   .cta-button{
     margin-top: 10px;
     padding: 22px 48px;
     border-radius: 14px;
-    background: linear-gradient(135deg, var(--cyan), #22D3EE);
-    color: #0D1117;
-    font-family:"Space Grotesk", Arial, sans-serif;
+    background: var(--green);
+    color: #050705;
+    font-family:"Geist", Arial, sans-serif;
     font-weight:700; font-size: 30px;
   }
   .cta-url{
-    font-family:"JetBrains Mono", monospace;
-    color: var(--green); font-size: 26px; letter-spacing:0.02em;
-  }
-  .swipe-cue{
-    position:absolute; bottom:64px; left:0; right:0;
-    display:flex; justify-content:center; align-items:center; gap:12px;
-    font-family:"JetBrains Mono", monospace; color:var(--text-dim); font-size:22px;
-    letter-spacing:0.08em; text-transform:uppercase;
+    font-family:"Geist Mono", monospace;
+    color: var(--mint-light); font-size: 26px; letter-spacing:0.02em;
   }
 
   .footer-row{ display:flex; justify-content:space-between; align-items:center; }
-  .footer-url{ font-family:"JetBrains Mono", monospace; color:var(--text-dim); font-size:24px; }
+  .footer-url{ font-family:"Geist Mono", monospace; color:var(--text-dim); font-size:24px; }
 
   .grow{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:40px; }
   .stack{ display:flex; flex-direction:column; gap:40px; }
-
-  [data-slide="hidden"]{ display:none; }
 </style>
 </head>
 <body>

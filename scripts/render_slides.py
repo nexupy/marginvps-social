@@ -9,16 +9,15 @@ CALENDAR_PATH = ROOT / "content" / "calendar.json"
 EXPORT_DIR = ROOT / "exports"
 
 COLOR_VARS = {
-    "cyan": "#38BDF8",
-    "amber": "#FB923C",
-    "green": "#4ADE80",
+    "green": "#12E068",
+    "mint": "#2CF982",
+    "mintlight": "#5CFFA1",
 }
 
 
 def wordmark_html():
     return (
         '<div class="wordmark">'
-        '<span class="prompt">&gt;_</span>'
         '<span class="margin">Margin</span><span class="vps">VPS</span>'
         "</div>"
     )
@@ -58,17 +57,14 @@ def render_cover(slide):
 
 def render_content(slide):
     body_type = slide.get("body_type", "list")
-    if body_type == "terminal":
-        lines = "\n".join(
-            f'<div>{line}</div>' if line else "<div>&nbsp;</div>"
-            for line in slide["terminal_lines"]
+    if body_type == "rows":
+        rows = "\n".join(
+            f'<div class="row"><div class="label">{r["label"]}'
+            + (f'<span class="meta">{r["meta"]}</span>' if r.get("meta") else "")
+            + f'</div><div class="value">{r["value"]}</div></div>'
+            for r in slide["rows"]
         )
-        body = f"""
-        <div class="terminal">
-          <div class="bar"><span></span><span></span><span></span></div>
-          <div class="body">{lines}</div>
-        </div>
-        """
+        body = f'<div class="rows">{rows}</div>'
     else:
         items = "\n".join(
             f'<div class="list-item"><span class="num">{i+1:02d}</span><span>{item}</span></div>'
@@ -149,8 +145,8 @@ RENDERERS = {
 
 
 def badge_color_hex(slide):
-    key = slide.get("badge_color", "cyan")
-    return COLOR_VARS.get(key, COLOR_VARS["cyan"])
+    key = slide.get("badge_color", "mintlight")
+    return COLOR_VARS.get(key, COLOR_VARS["mintlight"])
 
 
 def build_slide_html(template_src, slide):
@@ -173,9 +169,9 @@ def render_day(day, template_src, browser):
         html_path.write_text(html, encoding="utf-8")
         page.goto(html_path.resolve().as_uri())
         page.wait_for_timeout(250)
-        png_path = EXPORT_DIR / f"{day_id}_slide{idx}.png"
-        page.screenshot(path=str(png_path))
-        out_paths.append(png_path)
+        jpg_path = EXPORT_DIR / f"{day_id}_slide{idx}.jpg"
+        page.screenshot(path=str(jpg_path), type="jpeg", quality=92)
+        out_paths.append(jpg_path)
     page.close()
     return out_paths
 

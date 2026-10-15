@@ -5,57 +5,48 @@
       "day_number": 1,
       "date": "2026-10-19",
       "pillar": "Tips",
-      "topic": "5 SSH commands every VPS owner should know",
-      "caption": "Your VPS, demystified. 🖥️\n\nYou don't need to be a sysadmin to run your own server — you just need five commands in your back pocket. Save this post before your next late-night deploy.\n\nWhich one did you not know about? Tell us below. 👇\n\n#VPSHosting #SSH #DevOps #Linux #WebHosting #SysAdmin #MarginVPS #SelfHosted",
+      "topic": "Install MT4 or MT5 on your VPS in one click — no hunting for installers",
+      "caption": "Stop hunting for installers. 🖥️\n\nEvery MarginVPS plan ships with the MetaTrader Manager — install MT4 or MT5 for any broker in one click, right from your dashboard. No downloads, no searching broker websites for the right .exe.\n\nTrading platform, sorted before your coffee's done. ☕\n\n#ForexVPS #MT4 #MT5 #TradingTools #AlgoTrading #ForexTrading #MarginVPS",
       "status": "ready_for_review",
       "render": true,
       "slides": [
         {
           "kind": "cover",
           "pillar_label": "VPS TIP",
-          "badge_color": "cyan",
+          "badge_color": "mintlight",
           "pager": "1 / 4",
-          "headline": "5 SSH commands <span class=\"accent\">every VPS owner</span> should know",
-          "sub": "Save this one. You'll need it."
+          "headline": "Install MT4 or MT5 <span class=\"accent\">in one click</span>",
+          "sub": "No hunting for installers. Ever."
         },
         {
           "kind": "content",
           "pillar_label": "VPS TIP",
-          "badge_color": "cyan",
+          "badge_color": "mintlight",
           "pager": "2 / 4",
-          "headline": "Start here",
-          "body_type": "terminal",
-          "terminal_lines": [
-            "<span class=\"c-dim\"># 1. See what's eating your CPU/RAM</span>",
-            "<span class=\"c-cyan\">$</span> htop",
-            "",
-            "<span class=\"c-dim\"># 2. Check disk space before you're out</span>",
-            "<span class=\"c-cyan\">$</span> df -h",
-            "",
-            "<span class=\"c-dim\"># 3. Is your app actually running?</span>",
-            "<span class=\"c-cyan\">$</span> systemctl status nginx"
+          "headline": "How it works",
+          "body_type": "list",
+          "list_items": [
+            "Open the MetaTrader Manager — free on every VPS",
+            "Pick MT4 or MT5, for any broker",
+            "Installed and ready in seconds"
           ]
         },
         {
           "kind": "content",
           "pillar_label": "VPS TIP",
-          "badge_color": "cyan",
+          "badge_color": "mintlight",
           "pager": "3 / 4",
-          "headline": "Then this",
-          "body_type": "terminal",
-          "terminal_lines": [
-            "<span class=\"c-dim\"># 4. Find out why something crashed</span>",
-            "<span class=\"c-cyan\">$</span> journalctl -xe",
-            "",
-            "<span class=\"c-dim\"># 5. Confirm your firewall is actually on</span>",
-            "<span class=\"c-cyan\">$</span> ufw status",
-            "",
-            "<span class=\"c-dim\"># bookmark this post. you'll be back.</span>"
+          "headline": "Clone it. Run it again.",
+          "body_type": "list",
+          "list_items": [
+            "Need a second account? Clone any terminal instantly",
+            "Run multiple terminals side by side, fully isolated",
+            "Auto-starts with Windows — back after every reboot"
           ]
         },
         {
           "kind": "cta",
-          "tagline": "Need a VPS that doesn't fight you? NVMe-backed, root access, deployed in 60 seconds.",
+          "tagline": "Free on every MarginVPS plan. No extra software to buy.",
           "button_text": "Get Started",
           "url": "marginvps.com"
         }
@@ -66,46 +57,58 @@
       "day_number": 2,
       "date": "2026-10-20",
       "pillar": "Promo",
-      "topic": "Launch deal: 20% off your first 3 months",
-      "caption": "New here? We'll make it easy. 🚀\n\nGet 20% off your first 3 months on any MarginVPS plan — NVMe SSD, instant deploy, full root access, and a support team that actually answers. No contracts, cancel anytime.\n\nUse code LAUNCH20 at checkout. Offer ends soon.\n\n#VPSHosting #WebHosting #DevOps #CloudComputing #StartupTools #MarginVPS #LaunchDeal",
+      "topic": "Save 20% on your Forex VPS — co-located with your broker in under 60 seconds",
+      "caption": "Trade next door to your broker. 🚀\n\nSave 20% on any MarginVPS plan — co-located in the same data center as your broker, live in under 60 seconds. MT4, MT5 and the MetaTrader Manager pre-installed.\n\nFrom $16.67/mo. No long-term contract. Offer ends soon.\n\n#ForexVPS #MT4 #MT5 #LowLatency #ForexTrading #ForexBroker #MarginVPS",
       "status": "ready_for_review",
       "render": true,
       "slides": [
         {
           "kind": "cover",
           "pillar_label": "PROMO",
-          "badge_color": "amber",
+          "badge_color": "green",
           "pager": "1 / 4",
-          "headline": "20% off <span class=\"accent\">your first 3 months</span>",
-          "sub": "New customers only. No contracts."
+          "headline": "Save 20% on your <span class=\"accent\">Forex VPS</span>",
+          "sub": "Co-located with your broker. Live in under 60 seconds."
         },
         {
           "kind": "stat",
           "pillar_label": "PROMO",
-          "badge_color": "amber",
+          "badge_color": "green",
           "pager": "2 / 4",
           "stat_number": "20%",
-          "stat_label": "OFF ALL NEW VPS PLANS",
-          "stat_context": "Applies to your first 3 billing cycles on any MarginVPS plan. Stacks with nothing else — because it doesn't need to."
+          "stat_label": "OFF ANNUAL PLANS",
+          "stat_context": "Limited-time offer — lock in your rate before it ends."
         },
         {
           "kind": "content",
           "pillar_label": "PROMO",
-          "badge_color": "amber",
+          "badge_color": "green",
           "pager": "3 / 4",
           "headline": "What you get",
-          "body_type": "list",
-          "list_items": [
-            "NVMe SSD storage on every plan",
-            "Free migration from your old host",
-            "24/7 human support, no tickets lost",
-            "Deploy your server in under 60 seconds"
+          "body_type": "rows",
+          "rows": [
+            {
+              "label": "Latency to co-located brokers",
+              "value": "<1ms"
+            },
+            {
+              "label": "Uptime SLA",
+              "value": "99.99%"
+            },
+            {
+              "label": "Platforms pre-installed",
+              "value": "MT4 / MT5"
+            },
+            {
+              "label": "Money-back guarantee",
+              "value": "14-DAY"
+            }
           ]
         },
         {
           "kind": "cta",
-          "tagline": "Use code LAUNCH20 at checkout.",
-          "button_text": "Claim Offer",
+          "tagline": "From $16.67/mo. No long-term contract.",
+          "button_text": "Launch Your VPS",
           "url": "marginvps.com"
         }
       ]
@@ -115,132 +118,132 @@
       "day_number": 3,
       "date": "2026-10-21",
       "pillar": "Stats",
-      "topic": "99.95% uptime across our network, last 30 days",
-      "caption": "Uptime isn't a marketing number to us. 📊\n\n99.95% across our entire network over the last 30 days — monitored, logged, and no asterisks. That's under 22 minutes of downtime all month, network-wide.\n\nYour server shouldn't be the reason your product goes down.\n\n#Uptime #VPSHosting #Reliability #DevOps #Infrastructure #MarginVPS #CloudHosting",
+      "topic": "<1ms latency to top forex brokers — see the real numbers",
+      "caption": "<1ms. Not a typo. ⚡\n\nHere's what we actually measure from our data centers to the brokers you trade with — IC Markets, Pepperstone, Tickmill, Exness, Oanda, FP Markets, all under 1.1ms.\n\nCo-location isn't a buzzword here. It's a stopwatch.\n\n#ForexVPS #LowLatency #MT4 #MT5 #ForexBroker #AlgoTrading #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — '99.95% uptime, last 30 days' / 2) stat — big '99.95%' + '<22 MIN DOWNTIME NETWORK-WIDE, 30 DAYS' / 3) content — how we monitor it (health checks every 30s, redundant power + network, status page link) / 4) cta — 'Check our live status page' + marginvps.com/status"
+      "slide_breakdown": "1) cover — '<1ms latency to top forex brokers' / 2) content (rows) — broker : ping list (IC Markets 1.00ms, Pepperstone 1.00ms, Tickmill 1.00ms, Exness 1.01ms, Oanda 1.00ms, FP Markets 1.04ms) / 3) stat — '133+' brokers measured, label 'FIND YOURS' / 4) cta — 'Check your broker's latency' + marginvps.com"
     },
     {
       "id": "day-04",
       "day_number": 4,
       "date": "2026-10-22",
       "pillar": "Testimonial",
-      "topic": "Why one customer ditched shared hosting for MarginVPS",
-      "caption": "\"I spent two years blaming my code for slow page loads. It was the hosting.\" 💬\n\nOne of our customers moved from shared hosting to a MarginVPS instance and cut load times by more than half — same app, zero code changes.\n\nShared hosting makes you compete for resources with strangers. A VPS doesn't.\n\n#CustomerStory #VPSHosting #WebPerformance #WebHosting #DevOps #MarginVPS",
+      "topic": "Algo/EA trader story: running EAs 24/7 with zero downtime",
+      "caption": "\"My EAs finally run like they're supposed to.\" 💬\n\nOne of our algo traders spent months fighting a home PC that slept, rebooted, and dropped connection mid-session. Three weeks on MarginVPS: EAs running 24/7, zero missed signals.\n\nYour strategy is only as reliable as the machine running it.\n\n#AlgoTrading #ExpertAdvisor #ForexVPS #MT4 #MT5 #PropFirm #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'From shared hosting to zero complaints' / 2) testimonial — quote about slow shared hosting + switching, with attribution (first name + role, e.g. 'Indie SaaS founder') / 3) stat — page load time before vs after (e.g. '2.1s → 0.4s') / 4) cta — 'Ready to switch? Free migration included.'"
+      "slide_breakdown": "1) cover — 'My EAs finally run like they're supposed to' / 2) testimonial — quote about home PC sleeping/dropping connection vs 24/7 on MarginVPS, attribution 'Algo / EA trader' / 3) stat/content — 'Weeks of missed signals → 0 since switching' / 4) cta — 'Keep your EAs running. Always.'"
     },
     {
       "id": "day-05",
       "day_number": 5,
       "date": "2026-10-23",
       "pillar": "Fact",
-      "topic": "Did you know? NVMe SSDs can be ~10x faster than HDDs",
-      "caption": "Did you know? 🤔\n\nNVMe SSDs can deliver read/write speeds roughly 10x faster than traditional HDDs — and several times faster than even SATA SSDs. For a database-heavy app, that's the difference between a query and a wait.\n\nEvery MarginVPS plan runs on NVMe. No upsell required.\n\n#DidYouKnow #NVMe #VPSHosting #TechFacts #DevOps #ServerPerformance #MarginVPS",
+      "topic": "Your home Wi-Fi is the slowest part of your trade: 100-300ms+ vs <1ms co-located",
+      "caption": "Your Wi-Fi is the slowest part of your trade. 🏠➡️🏢\n\nFrom home, every order crosses your ISP, your router, and the public internet before it reaches your broker — 100 to 300ms or worse. Co-located on MarginVPS, your terminal sits in the same data center. <1ms.\n\nMilliseconds aren't bragging rights. They're fill price.\n\n#ForexVPS #Slippage #LowLatency #MT4 #MT5 #Scalping #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Did you know?' + headline about NVMe vs HDD speed / 2) stat — '~10x' faster, label 'NVMe vs HDD read/write speed' / 3) content — short plain-English explainer of why that matters for databases/apps / 4) cta — 'Every MarginVPS plan ships on NVMe.'"
+      "slide_breakdown": "1) cover — 'Your home Wi-Fi is the slowest part of your trade' / 2) content (rows comparison) — 'Trading from home' latency 100-300ms+ vs 'Trading on MarginVPS' latency <1ms / 3) content — why it matters (network jitter, background traffic vs dedicated co-located resources) / 4) cta — 'Stop trading through your Wi-Fi.'"
     },
     {
       "id": "day-06",
       "day_number": 6,
       "date": "2026-10-24",
       "pillar": "Tips",
-      "topic": "Secure your VPS in 5 minutes: basic firewall setup",
-      "caption": "Your VPS is on the public internet the second it boots. 🔒\n\nHere's the 5-minute firewall setup every new server should get before anything else touches it — deny by default, allow only what you need.\n\nSkipping this is how servers get found by bots in under an hour.\n\n#VPSSecurity #Firewall #Linux #DevOps #SysAdmin #CyberSecurity #MarginVPS",
+      "topic": "Clone and run multiple MT4/MT5 terminals side by side with the MarginVPS Manager",
+      "caption": "One VPS. As many terminals as you need. 🖥️🖥️\n\nThe MarginVPS Manager lets you clone any MT4/MT5 terminal and run them side by side — each one isolated, so accounts never interfere with each other. All of it auto-starts with Windows.\n\nMulti-account trading, without the juggling.\n\n#MT4 #MT5 #MultiAccount #AlgoTrading #ForexVPS #TradingTools #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Secure your VPS in 5 minutes' / 2) content (terminal) — ufw default deny incoming, allow OpenSSH, allow 80/443 / 3) content (terminal) — ufw enable + ufw status verbose / 4) cta — 'Need a server that's hardened by default?'"
+      "slide_breakdown": "1) cover — 'Run multiple MT4/MT5 terminals side by side' / 2) content (list) — clone any terminal in seconds / run many side by side, fully isolated / launch, auto-start, or remove anytime / 3) content — why it matters for multi-account or prop firm traders / 4) cta — 'Free on every MarginVPS plan.'"
     },
     {
       "id": "day-07",
       "day_number": 7,
       "date": "2026-10-25",
       "pillar": "Promo",
-      "topic": "Weekend flash sale: upgrade your plan, save 15%",
-      "caption": "Outgrowing your current plan? This weekend only. ⚡\n\nUpgrade to a bigger MarginVPS plan and save 15% on the difference — more vCPU, more RAM, same NVMe speed you're used to.\n\nFriday 12am to Sunday midnight. No code needed, discount applies automatically at checkout.\n\n#FlashSale #VPSHosting #WebHosting #CloudComputing #MarginVPS #WeekendDeal",
+      "topic": "Prop firm trader? Co-location can mean tighter fills during challenges",
+      "caption": "Running a prop firm challenge? Every fill counts. 🎯\n\nCo-location puts your terminal in the same data center as your broker, which can mean tighter fills and less slippage exactly when a challenge's rules are least forgiving.\n\nStandard and Professional plans are built for traders running multiple accounts.\n\n#PropFirm #ForexVPS #MT4 #MT5 #AlgoTrading #Slippage #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Weekend flash sale: upgrade & save 15%' / 2) stat — '15%' off upgrades, label 'THIS WEEKEND ONLY' / 3) content — list of what triggers an upgrade (traffic spikes, slow builds, running out of RAM) / 4) cta — 'Upgrade from your dashboard — discount is automatic.'"
+      "slide_breakdown": "1) cover — 'Running a prop firm challenge? Every fill counts.' / 2) content — co-location = tighter fills, less slippage, why that matters under challenge rules / 3) stat/content — Standard VPS (3-6 accounts) vs Professional VPS (7-8 accounts) quick comparison / 4) cta — 'Built for traders running multiple accounts.'"
     },
     {
       "id": "day-08",
       "day_number": 8,
       "date": "2026-10-26",
       "pillar": "Stats",
-      "topic": "Average page load time under 300ms on MarginVPS",
-      "caption": "Speed is a feature. ⚡\n\nAcross our hosted customer sites, average page load time sits under 300ms — that's NVMe storage, tuned networking, and no noisy neighbors fighting you for CPU.\n\nYour visitors won't wait 3 seconds. Make sure your host doesn't make them.\n\n#PageSpeed #WebPerformance #VPSHosting #CoreWebVitals #DevOps #MarginVPS",
+      "topic": "99.99% uptime SLA — what that actually means for your EAs",
+      "caption": "99.99% uptime. Here's what that actually means. 📊\n\nNo freezes during volatility spikes. No crashes mid-session. No missed signals because your VPS decided to restart. That's the bar we hold for every plan, monitored around the clock.\n\nYour EAs don't get days off. Neither should your infrastructure.\n\n#Uptime #ForexVPS #MT4 #MT5 #AlgoTrading #ExpertAdvisor #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Under 300ms. Average.' / 2) stat — big '<300ms' + label 'AVERAGE PAGE LOAD, ACROSS OUR NETWORK' / 3) content — the 3 reasons why (NVMe, tuned network, no overselling) / 4) cta — 'Run your own benchmark — first month is cheap to try.'"
+      "slide_breakdown": "1) cover — '99.99% uptime SLA' / 2) stat — big '99.99%', label 'UPTIME SLA, MONITORED 24/7' / 3) content (list) — no freezes during volatility / no shared CPU cycles / dedicated resources, never throttled / 4) cta — 'Infrastructure that doesn't take days off.'"
     },
     {
       "id": "day-09",
       "day_number": 9,
       "date": "2026-10-27",
       "pillar": "Testimonial",
-      "topic": "From crashing weekly to zero downtime — a dev's story",
-      "caption": "\"My server used to crash every Friday night. Obviously.\" 😅\n\nA solo developer running a side project told us their old budget VPS would silently die under traffic spikes — always on a Friday, always when they weren't near a laptop. Three months on MarginVPS: zero crashes.\n\nCheap hosting is expensive when it costs you your weekend.\n\n#DeveloperStory #VPSHosting #Uptime #IndieHacker #DevOps #MarginVPS",
+      "topic": "Multi-account trader: 3 terminals across 2 brokers for a year, zero missed sessions",
+      "caption": "\"Three terminals, two brokers, one VPS, zero missed sessions.\" 📈\n\nA multi-account trader has been running three MT4/MT5 terminals across two different brokers on a single MarginVPS instance for over a year — without a single dropped session.\n\nThat's what dedicated resources and zero noisy neighbors actually buy you.\n\n#MultiAccount #ForexVPS #MT4 #MT5 #AlgoTrading #ForexTrading #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'My server used to crash every Friday' / 2) testimonial — full quote + attribution ('Solo developer, side project') / 3) stat — 'Weekly crashes → 0 in 3 months' / 4) cta — 'Stop babysitting your server.'"
+      "slide_breakdown": "1) cover — 'Three terminals. Two brokers. One VPS. A full year.' / 2) testimonial — quote + attribution 'Multi-account trader' / 3) stat — '1 year, 0 missed sessions' / 4) cta — 'Run every account from one place.'"
     },
     {
       "id": "day-10",
       "day_number": 10,
       "date": "2026-10-28",
       "pillar": "Fact",
-      "topic": "VPS vs shared hosting: what's the real difference?",
-      "caption": "VPS vs shared hosting — what's actually different? 🤔\n\nShared hosting puts your site on a server with hundreds of strangers, splitting the same CPU and RAM. A VPS gives you dedicated, isolated resources that are yours alone — plus root access to configure things your way.\n\nIf you've ever asked \"why is my site slow for no reason,\" this is usually why.\n\n#VPSHosting #SharedHosting #WebHosting #TechExplained #DevOps #MarginVPS",
+      "topic": "Forex VPS vs a regular VPS: what's actually different",
+      "caption": "A Forex VPS isn't just 'a VPS for trading.' 🤔\n\nA regular VPS gets you a server. A Forex VPS gets you a server co-located inside the same data center as your broker, with MT4/MT5 pre-installed and support that actually understands trading infrastructure — not just generic troubleshooting.\n\nThe difference shows up in your fills.\n\n#ForexVPS #MT4 #MT5 #TechExplained #ForexTrading #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'VPS vs shared hosting: what's the real difference?' / 2) content — side-by-side style explainer (shared = split resources, noisy neighbors; VPS = dedicated, isolated, root access) / 3) content — when you actually need to upgrade (traffic growth, need for custom software, performance complaints) / 4) cta — 'Ready to stop sharing?'"
+      "slide_breakdown": "1) cover — 'Forex VPS vs a regular VPS: what's actually different' / 2) content (rows comparison) — co-location near brokers / platform pre-installed / trading-aware support, vs generic hosting's general-purpose setup / 3) content — when a regular VPS isn't enough for trading / 4) cta — 'Built specifically for traders.'"
     },
     {
       "id": "day-11",
       "day_number": 11,
       "date": "2026-10-29",
       "pillar": "Tips",
-      "topic": "Set up automatic backups in under 10 minutes",
-      "caption": "If it's not backed up, it doesn't exist. 💾\n\nHere's how to get automatic, scheduled backups running on your VPS in under 10 minutes — so a bad deploy or a fat-fingered rm -rf doesn't end your week.\n\nFuture you will send present you a thank-you note.\n\n#Backups #VPSHosting #DevOps #SysAdmin #Linux #MarginVPS #DisasterRecovery",
+      "topic": "Free Windows reinstall in about a minute — when you'd actually use it",
+      "caption": "Need a clean slate? About a minute. 🔄\n\nMessy install, leftover files from testing a dozen EAs, or just want to start fresh — a free Windows reinstall from your dashboard takes about a minute, no ticket required.\n\nUse it as often as you need. It's included.\n\n#ForexVPS #MT4 #MT5 #TradingTools #AlgoTrading #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Automatic backups in under 10 minutes' / 2) content (terminal) — simple cron + rsync/tar snapshot example / 3) content — 3-2-1 backup rule explained simply / 4) cta — 'MarginVPS plans include automated snapshots.'"
+      "slide_breakdown": "1) cover — 'Free Windows reinstall, about a minute' / 2) content (list) — when to use it: leftover EA clutter / testing gone wrong / just want a clean start / 3) content — how it works: one click in your dashboard, no support ticket / 4) cta — 'Included free on every plan.'"
     },
     {
       "id": "day-12",
       "day_number": 12,
       "date": "2026-10-30",
       "pillar": "Promo",
-      "topic": "Refer a friend — you both get $10 credit",
-      "caption": "Good hosting is worth talking about. 🎁\n\nRefer a friend to MarginVPS and you both get $10 in account credit once they're up and running. No limit on how many friends you can refer.\n\nShare your link, stack the credit, host for less.\n\n#ReferralProgram #VPSHosting #WebHosting #MarginVPS #CloudComputing",
+      "topic": "Move your VPS to a new data center free, anytime — broker changed servers? So can you",
+      "caption": "Broker changed servers? So can you. 📍\n\nMove your entire VPS — files, EAs, and settings included — to another data center in one click, free. It usually takes about 60 minutes, and you don't lose a thing.\n\nSeven financial hubs to choose from: LD4, NY4, FR2, TY3, SG1, HK1, DUB1.\n\n#ForexVPS #MT4 #MT5 #LowLatency #ForexBroker #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Refer a friend. You both get $10.' / 2) content — how it works, 3 steps (share your link → they sign up → credit lands in both accounts) / 3) stat/content — 'No limit on referrals' callout / 4) cta — 'Find your referral link in your dashboard.'"
+      "slide_breakdown": "1) cover — 'Broker changed servers? So can you.' / 2) content (list) — one click to move your whole VPS / files, EAs and settings included / usually takes about 60 minutes / free, anytime / 3) content (rows) — 7 data centers: LD4, NY4, FR2, TY3, SG1, HK1, DUB1 / 4) cta — 'Stay co-located. Always.'"
     },
     {
       "id": "day-13",
       "day_number": 13,
       "date": "2026-10-31",
       "pillar": "Stats",
-      "topic": "Average support response time: 12 minutes",
-      "caption": "Support that actually responds. ⏱️\n\nOur average first-response time is 12 minutes — not 12 hours, not a bot reading your ticket back to you. Real engineers who've actually run servers.\n\nWhen something's down, minutes matter.\n\n#CustomerSupport #VPSHosting #DevOps #WebHosting #MarginVPS #Uptime",
+      "topic": "7 global data centers co-located with major brokers: LD4, NY4, FR2, TY3, SG1, HK1, DUB1",
+      "caption": "Seven financial hubs. One dashboard. 🌍\n\nLD4, NY4, FR2, TY3, SG1, HK1, DUB1 — our data centers sit inside the same hubs where major forex brokers are hosted, so you can pick the one closest to yours.\n\nNot sure which one? We'll measure it for you.\n\n#ForexVPS #GlobalNetwork #MT4 #MT5 #ForexBroker #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — '12 minutes. Average response time.' / 2) stat — big '12 min' + label 'AVERAGE FIRST SUPPORT RESPONSE' / 3) content — who's answering (real engineers, 24/7, no tiered bot-first queue) / 4) cta — 'See for yourself — ask us anything before you sign up.'"
+      "slide_breakdown": "1) cover — '7 global data centers, co-located with major brokers' / 2) content (rows) — LD4 London, NY4 New York, FR2 Frankfurt, TY3 Tokyo, SG1 Singapore, HK1 Hong Kong, DUB1 Dublin / 3) stat — fastest measured pings callout, e.g. 'Hong Kong — 0.24ms' / 4) cta — \"Check your broker's latency — we'll show you the fastest location.\""
     },
     {
       "id": "day-14",
       "day_number": 14,
       "date": "2026-11-01",
       "pillar": "Fact",
-      "topic": "Why root access matters for developers",
-      "caption": "Root access isn't a power feature. It's the point. 🔑\n\nWith full root access, you install exactly what your stack needs, configure the OS your way, and aren't blocked by a host's rulebook. No \"that's not supported on our platform.\"\n\nIf you've outgrown managed hosting's guardrails, this is why VPS exists.\n\n#RootAccess #VPSHosting #DevOps #Linux #SelfHosted #MarginVPS",
+      "topic": "Why milliseconds matter: the real cost of slippage from a home connection",
+      "caption": "Milliseconds aren't bragging rights. They're money. 💸\n\nEvery millisecond between your order and your broker's server is a window for the price to move against you — that's slippage. Shrink the distance, shrink the window.\n\nCo-location doesn't guarantee a win. It just stops the clock from working against you.\n\n#Slippage #ForexVPS #Scalping #MT4 #MT5 #AlgoTrading #MarginVPS",
       "status": "draft",
       "render": false,
-      "slide_breakdown": "1) cover — 'Why root access matters' / 2) content — what root unlocks (custom runtimes, system-level config, your firewall rules, Docker/K8s, anything) / 3) content — contrast with managed hosting restrictions, briefly / 4) cta — 'Full root access on every MarginVPS plan.'"
+      "slide_breakdown": "1) cover — 'Why milliseconds matter: the real cost of slippage' / 2) content — what slippage is and how latency widens the window for price to move / 3) content (rows comparison) — home connection 100-300ms+ vs co-located <1ms, framed as slippage exposure / 4) cta — 'Close the gap. Co-locate with your broker.'"
     }
   ]
 }
