@@ -1,0 +1,289 @@
+<title>Content Runway</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg: #0D1117;
+    --surface: #121821;
+    --surface-raised: #161D27;
+    --border: #232B36;
+    --border-soft: #1B222B;
+    --cyan: #38BDF8;
+    --green: #4ADE80;
+    --amber: #FB923C;
+    --red: #F87171;
+    --text: #F8FAFC;
+    --text-dim: #94A3B8;
+    --text-faint: #5B6675;
+    --radius: 14px;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, sans-serif;
+    padding-inline: 20px;
+    padding-block: 36px;
+    display: flex;
+    justify-content: center;
+  }
+  .page{ width: 100%; max-width: 920px; display: flex; flex-direction: column; gap: 32px; }
+
+  /* header */
+  .wordmark{ display:inline-flex; align-items:baseline; gap:2px; font-family:"Space Grotesk", sans-serif; font-weight:700; font-size: 26px; }
+  .wordmark .prompt{ color: var(--green); font-family:"JetBrains Mono", monospace; font-size: 22px; margin-right: 6px; }
+  .wordmark .vps{ color: var(--cyan); }
+
+  .masthead{ display:flex; flex-direction:column; gap: 6px; }
+  .eyebrow{ font-family:"JetBrains Mono", monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  h1{ font-family:"Space Grotesk", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; margin: 0; }
+  .sub{ color: var(--text-dim); font-size: 15px; line-height: 1.5; max-width: 60ch; }
+
+  /* stat strip */
+  .stats{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .stat{ background: var(--surface); padding: 18px 16px; display:flex; flex-direction:column; gap: 4px; }
+  .stat-num{ font-family:"Space Grotesk", sans-serif; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; }
+  .stat-label{ font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+  .stat.c-cyan .stat-num{ color: var(--cyan); }
+  .stat.c-amber .stat-num{ color: var(--amber); }
+  .stat.c-green .stat-num{ color: var(--green); }
+
+  .viewer-note{ font-size: 13px; color: var(--text-faint); font-family:"JetBrains Mono", monospace; }
+  .viewer-note.hide{ display:none; }
+
+  /* day cards */
+  .runway{ display:flex; flex-direction:column; gap: 14px; }
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    display:flex; flex-direction:column; gap: 16px;
+  }
+  .card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap: 16px; flex-wrap: wrap; }
+  .day-id{ display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap; }
+  .day-num{ font-family:"JetBrains Mono", monospace; color: var(--text-faint); font-size: 13px; }
+  .day-date{ font-family:"JetBrains Mono", monospace; color: var(--text-dim); font-size: 13px; }
+
+  .badge{ display:inline-flex; align-items:center; gap: 7px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-raised); font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; width: fit-content; }
+  .badge .dot{ width: 7px; height: 7px; border-radius: 50%; }
+  .badge.pillar-tips{ color: var(--cyan); } .badge.pillar-tips .dot{ background: var(--cyan); }
+  .badge.pillar-promo{ color: var(--amber); } .badge.pillar-promo .dot{ background: var(--amber); }
+  .badge.pillar-stats{ color: var(--green); } .badge.pillar-stats .dot{ background: var(--green); }
+  .badge.pillar-testimonial{ color: var(--green); } .badge.pillar-testimonial .dot{ background: var(--green); }
+  .badge.pillar-fact{ color: var(--cyan); } .badge.pillar-fact .dot{ background: var(--cyan); }
+
+  .status-chip{ display:inline-flex; align-items:center; gap: 7px; padding: 6px 13px; border-radius: 999px; font-family:"JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .status-chip .dot{ width: 7px; height: 7px; border-radius: 50%; }
+  .status-draft{ color: var(--text-faint); background: var(--surface-raised); border: 1px solid var(--border); }
+  .status-draft .dot{ background: var(--text-faint); }
+  .status-ready_for_review{ color: var(--cyan); background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); }
+  .status-ready_for_review .dot{ background: var(--cyan); }
+  .status-approved{ color: var(--green); background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); }
+  .status-approved .dot{ background: var(--green); }
+  .status-needs_changes{ color: var(--amber); background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.3); }
+  .status-needs_changes .dot{ background: var(--amber); }
+  .status-posted{ color: var(--text); background: rgba(248,250,252,0.08); border: 1px solid var(--border); }
+  .status-posted .dot{ background: var(--text); }
+
+  .topic{ font-family:"Space Grotesk", sans-serif; font-weight: 600; font-size: 20px; line-height: 1.35; text-wrap: balance; margin: 0; }
+
+  .thumbs{ display:flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+  .thumbs img{ height: 150px; width: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); flex-shrink: 0; }
+  .pending-note{ font-family:"JetBrains Mono", monospace; font-size: 12px; color: var(--text-faint); background: var(--surface-raised); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; }
+
+  details.caption{ border-top: 1px solid var(--border-soft); padding-top: 12px; }
+  details.caption summary{ cursor: pointer; font-size: 13px; color: var(--text-dim); font-weight: 500; list-style: none; display:flex; align-items:center; gap: 6px; }
+  details.caption summary::before{ content: "▸"; font-size: 10px; color: var(--text-faint); transition: transform 0.15s ease; }
+  details.caption[open] summary::before{ transform: rotate(90deg); }
+  details.caption summary::-webkit-details-marker{ display:none; }
+  .caption-body{ margin-top: 10px; white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: var(--text-dim); max-width: 68ch; }
+
+  .breakdown-body{ margin-top: 10px; font-size: 13px; line-height: 1.6; color: var(--text-faint); max-width: 70ch; }
+
+  .card-actions{ display:flex; gap: 10px; align-items:center; flex-wrap: wrap; }
+  .btn{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 13px; padding: 9px 16px; border-radius: 9px; border: 1px solid transparent; cursor: pointer; display:inline-flex; align-items:center; gap: 6px; transition: opacity 0.12s ease; }
+  .btn:hover{ opacity: 0.85; }
+  .btn:disabled{ opacity: 0.4; cursor: default; }
+  .btn-approve{ background: var(--green); color: #06260F; }
+  .btn-changes{ background: transparent; color: var(--amber); border-color: rgba(251,146,60,0.4); }
+  .btn-reset{ background: transparent; color: var(--text-faint); border-color: var(--border); }
+  .action-note{ font-size: 12px; color: var(--text-faint); font-family:"JetBrains Mono", monospace; }
+
+  .empty{ text-align:center; padding: 40px 0; color: var(--text-faint); font-family:"JetBrains Mono", monospace; font-size: 13px; }
+
+  @media (max-width: 560px){
+    .stats{ grid-template-columns: repeat(2, 1fr); }
+    h1{ font-size: 26px; }
+  }
+</style>
+
+<div class="page">
+  <div class="masthead">
+    <div class="wordmark"><span class="prompt">&gt;_</span><span>Margin</span><span class="vps">VPS</span></div>
+    <div class="eyebrow">Instagram content runway</div>
+    <h1>14-day posting plan</h1>
+    <div class="sub">Everything below is drafted and waiting on you. Approve a day to clear it for scheduling, or flag it for changes — nothing posts until you approve it.</div>
+  </div>
+
+  <div class="stats" id="stats">
+    <div class="stat c-cyan"><div class="stat-num" id="stat-total">—</div><div class="stat-label">Days planned</div></div>
+    <div class="stat c-cyan"><div class="stat-num" id="stat-review">—</div><div class="stat-label">Ready for review</div></div>
+    <div class="stat c-green"><div class="stat-num" id="stat-approved">—</div><div class="stat-label">Approved</div></div>
+    <div class="stat c-amber"><div class="stat-num" id="stat-draft">—</div><div class="stat-label">Copy only</div></div>
+  </div>
+
+  <div class="viewer-note hide" id="readonly-note">Read-only view — sign in with edit access to approve posts.</div>
+
+  <div class="runway" id="runway">
+    <div class="empty">Loading content plan…</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const PILLAR_CLASS = {
+    Tips: "pillar-tips", Promo: "pillar-promo", Stats: "pillar-stats",
+    Testimonial: "pillar-testimonial", Fact: "pillar-fact"
+  };
+  const STATUS_LABEL = {
+    draft: "Copy ready · design pending",
+    ready_for_review: "Ready for review",
+    approved: "Approved",
+    needs_changes: "Needs changes",
+    posted: "Posted"
+  };
+
+  const runwayEl = document.getElementById("runway");
+  const readonlyNote = document.getElementById("readonly-note");
+  let canWrite = false;
+  let docsCache = [];
+
+  function escapeHtml(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  function renderStats(docs){
+    const total = docs.length;
+    const review = docs.filter(d => d.status === "ready_for_review").length;
+    const approved = docs.filter(d => d.status === "approved" || d.status === "posted").length;
+    const draft = docs.filter(d => d.status === "draft" || d.status === "needs_changes").length;
+    document.getElementById("stat-total").textContent = total;
+    document.getElementById("stat-review").textContent = review;
+    document.getElementById("stat-approved").textContent = approved;
+    document.getElementById("stat-draft").textContent = draft;
+  }
+
+  function cardHtml(d){
+    const pillarClass = PILLAR_CLASS[d.pillar] || "pillar-tips";
+    const statusClass = "status-" + (d.status || "draft");
+    const statusLabel = STATUS_LABEL[d.status] || d.status;
+
+    let mediaHtml;
+    if (Array.isArray(d.image_urls) && d.image_urls.length){
+      mediaHtml = '<div class="thumbs">' + d.image_urls.map(u =>
+        '<img src="' + escapeHtml(u) + '" alt="' + escapeHtml(d.topic) + ' slide" loading="lazy">'
+      ).join("") + '</div>';
+    } else {
+      mediaHtml = '<div class="pending-note">' + escapeHtml(d.slide_breakdown || "Slide breakdown pending.") + '</div>';
+    }
+
+    const captionHtml = d.caption
+      ? '<details class="caption"><summary>Caption &amp; hashtags</summary><div class="caption-body">' + escapeHtml(d.caption) + '</div></details>'
+      : "";
+
+    const actionsHtml = canWrite ? (
+      '<div class="card-actions">' +
+        '<button class="btn btn-approve" data-action="approve" data-id="' + d.id + '" ' + (d.status === "approved" ? "disabled" : "") + '>Approve</button>' +
+        '<button class="btn btn-changes" data-action="needs_changes" data-id="' + d.id + '" ' + (d.status === "needs_changes" ? "disabled" : "") + '>Needs changes</button>' +
+        (d.status === "approved" || d.status === "needs_changes"
+          ? '<button class="btn btn-reset" data-action="reset" data-id="' + d.id + '">Reset</button>'
+          : "") +
+      '</div>'
+    ) : "";
+
+    return (
+      '<div class="card" data-card="' + d.id + '">' +
+        '<div class="card-top">' +
+          '<div class="day-id">' +
+            '<span class="day-num">DAY ' + String(d.day_number).padStart(2, "0") + '</span>' +
+            '<span class="day-date">' + escapeHtml(d.date) + '</span>' +
+            '<span class="badge ' + pillarClass + '"><span class="dot"></span>' + escapeHtml(d.pillar) + '</span>' +
+          '</div>' +
+          '<span class="status-chip ' + statusClass + '"><span class="dot"></span>' + escapeHtml(statusLabel) + '</span>' +
+        '</div>' +
+        '<p class="topic">' + escapeHtml(d.topic) + '</p>' +
+        mediaHtml +
+        captionHtml +
+        actionsHtml +
+      '</div>'
+    );
+  }
+
+  function render(){
+    if (!docsCache.length){
+      runwayEl.innerHTML = '<div class="empty">No posts seeded yet.</div>';
+      renderStats([]);
+      return;
+    }
+    const sorted = [...docsCache].sort((a, b) => a.day_number - b.day_number);
+    runwayEl.innerHTML = sorted.map(cardHtml).join("");
+    renderStats(sorted);
+  }
+
+  async function handleAction(action, id){
+    const db = window.__db;
+    if (!db) return;
+    const statusMap = { approve: "approved", needs_changes: "needs_changes", reset: "ready_for_review" };
+    const nextStatus = statusMap[action];
+    if (!nextStatus) return;
+    const btns = document.querySelectorAll('[data-card="' + id + '"] .btn');
+    btns.forEach(b => b.disabled = true);
+    try {
+      await db.collection("posts").doc(id).update({ status: nextStatus, updated_at: new Date().toISOString() });
+    } catch (e) {
+      btns.forEach(b => b.disabled = false);
+    }
+  }
+
+  runwayEl.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-action]");
+    if (!btn) return;
+    handleAction(btn.getAttribute("data-action"), btn.getAttribute("data-id"));
+  });
+
+  async function boot(){
+    try {
+      const claude = window.claude;
+      if (!claude || !claude.use){
+        runwayEl.innerHTML = '<div class="empty">This view can&#39;t load the content plan.</div>';
+        return;
+      }
+      const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+      if (!db){
+        runwayEl.innerHTML = '<div class="empty">This view can&#39;t load the content plan.</div>';
+        return;
+      }
+      window.__db = db;
+      if (user){
+        try { canWrite = await user.can("data.write"); } catch (e) { canWrite = false; }
+      }
+      readonlyNote.classList.toggle("hide", !!canWrite);
+
+      db.collection("posts").onSnapshot((snap) => {
+        docsCache = snap.docs.map(doc => Object.assign({ id: doc.id }, doc.data()));
+        render();
+      }, (err) => {
+        runwayEl.innerHTML = '<div class="empty">Couldn&#39;t load the content plan (' + escapeHtml(err.code) + ').</div>';
+      });
+    } catch (e) {
+      runwayEl.innerHTML = '<div class="empty">Something went wrong loading the plan.</div>';
+    }
+  }
+
+  boot();
+})();
+</script>

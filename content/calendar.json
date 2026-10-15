@@ -1,0 +1,246 @@
+{
+  "days": [
+    {
+      "id": "day-01",
+      "day_number": 1,
+      "date": "2026-10-19",
+      "pillar": "Tips",
+      "topic": "5 SSH commands every VPS owner should know",
+      "caption": "Your VPS, demystified. 🖥️\n\nYou don't need to be a sysadmin to run your own server — you just need five commands in your back pocket. Save this post before your next late-night deploy.\n\nWhich one did you not know about? Tell us below. 👇\n\n#VPSHosting #SSH #DevOps #Linux #WebHosting #SysAdmin #MarginVPS #SelfHosted",
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "VPS TIP",
+          "badge_color": "cyan",
+          "pager": "1 / 4",
+          "headline": "5 SSH commands <span class=\"accent\">every VPS owner</span> should know",
+          "sub": "Save this one. You'll need it."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "cyan",
+          "pager": "2 / 4",
+          "headline": "Start here",
+          "body_type": "terminal",
+          "terminal_lines": [
+            "<span class=\"c-dim\"># 1. See what's eating your CPU/RAM</span>",
+            "<span class=\"c-cyan\">$</span> htop",
+            "",
+            "<span class=\"c-dim\"># 2. Check disk space before you're out</span>",
+            "<span class=\"c-cyan\">$</span> df -h",
+            "",
+            "<span class=\"c-dim\"># 3. Is your app actually running?</span>",
+            "<span class=\"c-cyan\">$</span> systemctl status nginx"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "cyan",
+          "pager": "3 / 4",
+          "headline": "Then this",
+          "body_type": "terminal",
+          "terminal_lines": [
+            "<span class=\"c-dim\"># 4. Find out why something crashed</span>",
+            "<span class=\"c-cyan\">$</span> journalctl -xe",
+            "",
+            "<span class=\"c-dim\"># 5. Confirm your firewall is actually on</span>",
+            "<span class=\"c-cyan\">$</span> ufw status",
+            "",
+            "<span class=\"c-dim\"># bookmark this post. you'll be back.</span>"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Need a VPS that doesn't fight you? NVMe-backed, root access, deployed in 60 seconds.",
+          "button_text": "Get Started",
+          "url": "marginvps.com"
+        }
+      ]
+    },
+    {
+      "id": "day-02",
+      "day_number": 2,
+      "date": "2026-10-20",
+      "pillar": "Promo",
+      "topic": "Launch deal: 20% off your first 3 months",
+      "caption": "New here? We'll make it easy. 🚀\n\nGet 20% off your first 3 months on any MarginVPS plan — NVMe SSD, instant deploy, full root access, and a support team that actually answers. No contracts, cancel anytime.\n\nUse code LAUNCH20 at checkout. Offer ends soon.\n\n#VPSHosting #WebHosting #DevOps #CloudComputing #StartupTools #MarginVPS #LaunchDeal",
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "PROMO",
+          "badge_color": "amber",
+          "pager": "1 / 4",
+          "headline": "20% off <span class=\"accent\">your first 3 months</span>",
+          "sub": "New customers only. No contracts."
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "PROMO",
+          "badge_color": "amber",
+          "pager": "2 / 4",
+          "stat_number": "20%",
+          "stat_label": "OFF ALL NEW VPS PLANS",
+          "stat_context": "Applies to your first 3 billing cycles on any MarginVPS plan. Stacks with nothing else — because it doesn't need to."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "PROMO",
+          "badge_color": "amber",
+          "pager": "3 / 4",
+          "headline": "What you get",
+          "body_type": "list",
+          "list_items": [
+            "NVMe SSD storage on every plan",
+            "Free migration from your old host",
+            "24/7 human support, no tickets lost",
+            "Deploy your server in under 60 seconds"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Use code LAUNCH20 at checkout.",
+          "button_text": "Claim Offer",
+          "url": "marginvps.com"
+        }
+      ]
+    },
+    {
+      "id": "day-03",
+      "day_number": 3,
+      "date": "2026-10-21",
+      "pillar": "Stats",
+      "topic": "99.95% uptime across our network, last 30 days",
+      "caption": "Uptime isn't a marketing number to us. 📊\n\n99.95% across our entire network over the last 30 days — monitored, logged, and no asterisks. That's under 22 minutes of downtime all month, network-wide.\n\nYour server shouldn't be the reason your product goes down.\n\n#Uptime #VPSHosting #Reliability #DevOps #Infrastructure #MarginVPS #CloudHosting",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — '99.95% uptime, last 30 days' / 2) stat — big '99.95%' + '<22 MIN DOWNTIME NETWORK-WIDE, 30 DAYS' / 3) content — how we monitor it (health checks every 30s, redundant power + network, status page link) / 4) cta — 'Check our live status page' + marginvps.com/status"
+    },
+    {
+      "id": "day-04",
+      "day_number": 4,
+      "date": "2026-10-22",
+      "pillar": "Testimonial",
+      "topic": "Why one customer ditched shared hosting for MarginVPS",
+      "caption": "\"I spent two years blaming my code for slow page loads. It was the hosting.\" 💬\n\nOne of our customers moved from shared hosting to a MarginVPS instance and cut load times by more than half — same app, zero code changes.\n\nShared hosting makes you compete for resources with strangers. A VPS doesn't.\n\n#CustomerStory #VPSHosting #WebPerformance #WebHosting #DevOps #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'From shared hosting to zero complaints' / 2) testimonial — quote about slow shared hosting + switching, with attribution (first name + role, e.g. 'Indie SaaS founder') / 3) stat — page load time before vs after (e.g. '2.1s → 0.4s') / 4) cta — 'Ready to switch? Free migration included.'"
+    },
+    {
+      "id": "day-05",
+      "day_number": 5,
+      "date": "2026-10-23",
+      "pillar": "Fact",
+      "topic": "Did you know? NVMe SSDs can be ~10x faster than HDDs",
+      "caption": "Did you know? 🤔\n\nNVMe SSDs can deliver read/write speeds roughly 10x faster than traditional HDDs — and several times faster than even SATA SSDs. For a database-heavy app, that's the difference between a query and a wait.\n\nEvery MarginVPS plan runs on NVMe. No upsell required.\n\n#DidYouKnow #NVMe #VPSHosting #TechFacts #DevOps #ServerPerformance #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Did you know?' + headline about NVMe vs HDD speed / 2) stat — '~10x' faster, label 'NVMe vs HDD read/write speed' / 3) content — short plain-English explainer of why that matters for databases/apps / 4) cta — 'Every MarginVPS plan ships on NVMe.'"
+    },
+    {
+      "id": "day-06",
+      "day_number": 6,
+      "date": "2026-10-24",
+      "pillar": "Tips",
+      "topic": "Secure your VPS in 5 minutes: basic firewall setup",
+      "caption": "Your VPS is on the public internet the second it boots. 🔒\n\nHere's the 5-minute firewall setup every new server should get before anything else touches it — deny by default, allow only what you need.\n\nSkipping this is how servers get found by bots in under an hour.\n\n#VPSSecurity #Firewall #Linux #DevOps #SysAdmin #CyberSecurity #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Secure your VPS in 5 minutes' / 2) content (terminal) — ufw default deny incoming, allow OpenSSH, allow 80/443 / 3) content (terminal) — ufw enable + ufw status verbose / 4) cta — 'Need a server that's hardened by default?'"
+    },
+    {
+      "id": "day-07",
+      "day_number": 7,
+      "date": "2026-10-25",
+      "pillar": "Promo",
+      "topic": "Weekend flash sale: upgrade your plan, save 15%",
+      "caption": "Outgrowing your current plan? This weekend only. ⚡\n\nUpgrade to a bigger MarginVPS plan and save 15% on the difference — more vCPU, more RAM, same NVMe speed you're used to.\n\nFriday 12am to Sunday midnight. No code needed, discount applies automatically at checkout.\n\n#FlashSale #VPSHosting #WebHosting #CloudComputing #MarginVPS #WeekendDeal",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Weekend flash sale: upgrade & save 15%' / 2) stat — '15%' off upgrades, label 'THIS WEEKEND ONLY' / 3) content — list of what triggers an upgrade (traffic spikes, slow builds, running out of RAM) / 4) cta — 'Upgrade from your dashboard — discount is automatic.'"
+    },
+    {
+      "id": "day-08",
+      "day_number": 8,
+      "date": "2026-10-26",
+      "pillar": "Stats",
+      "topic": "Average page load time under 300ms on MarginVPS",
+      "caption": "Speed is a feature. ⚡\n\nAcross our hosted customer sites, average page load time sits under 300ms — that's NVMe storage, tuned networking, and no noisy neighbors fighting you for CPU.\n\nYour visitors won't wait 3 seconds. Make sure your host doesn't make them.\n\n#PageSpeed #WebPerformance #VPSHosting #CoreWebVitals #DevOps #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Under 300ms. Average.' / 2) stat — big '<300ms' + label 'AVERAGE PAGE LOAD, ACROSS OUR NETWORK' / 3) content — the 3 reasons why (NVMe, tuned network, no overselling) / 4) cta — 'Run your own benchmark — first month is cheap to try.'"
+    },
+    {
+      "id": "day-09",
+      "day_number": 9,
+      "date": "2026-10-27",
+      "pillar": "Testimonial",
+      "topic": "From crashing weekly to zero downtime — a dev's story",
+      "caption": "\"My server used to crash every Friday night. Obviously.\" 😅\n\nA solo developer running a side project told us their old budget VPS would silently die under traffic spikes — always on a Friday, always when they weren't near a laptop. Three months on MarginVPS: zero crashes.\n\nCheap hosting is expensive when it costs you your weekend.\n\n#DeveloperStory #VPSHosting #Uptime #IndieHacker #DevOps #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'My server used to crash every Friday' / 2) testimonial — full quote + attribution ('Solo developer, side project') / 3) stat — 'Weekly crashes → 0 in 3 months' / 4) cta — 'Stop babysitting your server.'"
+    },
+    {
+      "id": "day-10",
+      "day_number": 10,
+      "date": "2026-10-28",
+      "pillar": "Fact",
+      "topic": "VPS vs shared hosting: what's the real difference?",
+      "caption": "VPS vs shared hosting — what's actually different? 🤔\n\nShared hosting puts your site on a server with hundreds of strangers, splitting the same CPU and RAM. A VPS gives you dedicated, isolated resources that are yours alone — plus root access to configure things your way.\n\nIf you've ever asked \"why is my site slow for no reason,\" this is usually why.\n\n#VPSHosting #SharedHosting #WebHosting #TechExplained #DevOps #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'VPS vs shared hosting: what's the real difference?' / 2) content — side-by-side style explainer (shared = split resources, noisy neighbors; VPS = dedicated, isolated, root access) / 3) content — when you actually need to upgrade (traffic growth, need for custom software, performance complaints) / 4) cta — 'Ready to stop sharing?'"
+    },
+    {
+      "id": "day-11",
+      "day_number": 11,
+      "date": "2026-10-29",
+      "pillar": "Tips",
+      "topic": "Set up automatic backups in under 10 minutes",
+      "caption": "If it's not backed up, it doesn't exist. 💾\n\nHere's how to get automatic, scheduled backups running on your VPS in under 10 minutes — so a bad deploy or a fat-fingered rm -rf doesn't end your week.\n\nFuture you will send present you a thank-you note.\n\n#Backups #VPSHosting #DevOps #SysAdmin #Linux #MarginVPS #DisasterRecovery",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Automatic backups in under 10 minutes' / 2) content (terminal) — simple cron + rsync/tar snapshot example / 3) content — 3-2-1 backup rule explained simply / 4) cta — 'MarginVPS plans include automated snapshots.'"
+    },
+    {
+      "id": "day-12",
+      "day_number": 12,
+      "date": "2026-10-30",
+      "pillar": "Promo",
+      "topic": "Refer a friend — you both get $10 credit",
+      "caption": "Good hosting is worth talking about. 🎁\n\nRefer a friend to MarginVPS and you both get $10 in account credit once they're up and running. No limit on how many friends you can refer.\n\nShare your link, stack the credit, host for less.\n\n#ReferralProgram #VPSHosting #WebHosting #MarginVPS #CloudComputing",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Refer a friend. You both get $10.' / 2) content — how it works, 3 steps (share your link → they sign up → credit lands in both accounts) / 3) stat/content — 'No limit on referrals' callout / 4) cta — 'Find your referral link in your dashboard.'"
+    },
+    {
+      "id": "day-13",
+      "day_number": 13,
+      "date": "2026-10-31",
+      "pillar": "Stats",
+      "topic": "Average support response time: 12 minutes",
+      "caption": "Support that actually responds. ⏱️\n\nOur average first-response time is 12 minutes — not 12 hours, not a bot reading your ticket back to you. Real engineers who've actually run servers.\n\nWhen something's down, minutes matter.\n\n#CustomerSupport #VPSHosting #DevOps #WebHosting #MarginVPS #Uptime",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — '12 minutes. Average response time.' / 2) stat — big '12 min' + label 'AVERAGE FIRST SUPPORT RESPONSE' / 3) content — who's answering (real engineers, 24/7, no tiered bot-first queue) / 4) cta — 'See for yourself — ask us anything before you sign up.'"
+    },
+    {
+      "id": "day-14",
+      "day_number": 14,
+      "date": "2026-11-01",
+      "pillar": "Fact",
+      "topic": "Why root access matters for developers",
+      "caption": "Root access isn't a power feature. It's the point. 🔑\n\nWith full root access, you install exactly what your stack needs, configure the OS your way, and aren't blocked by a host's rulebook. No \"that's not supported on our platform.\"\n\nIf you've outgrown managed hosting's guardrails, this is why VPS exists.\n\n#RootAccess #VPSHosting #DevOps #Linux #SelfHosted #MarginVPS",
+      "status": "draft",
+      "render": false,
+      "slide_breakdown": "1) cover — 'Why root access matters' / 2) content — what root unlocks (custom runtimes, system-level config, your firewall rules, Docker/K8s, anything) / 3) content — contrast with managed hosting restrictions, briefly / 4) cta — 'Full root access on every MarginVPS plan.'"
+    }
+  ]
+}
