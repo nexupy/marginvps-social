@@ -158,36 +158,36 @@
       "date": "2026-10-22",
       "pillar": "Testimonial",
       "topic": "Algo/EA trader story: running EAs 24/7 with zero downtime",
-      "caption": "\"My EAs finally run like they're supposed to.\" 💬\n\nOne of our algo traders spent months fighting a home PC that slept, rebooted, and dropped connection mid-session. Three weeks on MarginVPS: EAs running 24/7, zero missed signals.\n\nYour strategy is only as reliable as the machine running it.\n\n#AlgoTrading #ExpertAdvisor #ForexVPS #MT4 #MT5 #PropFirm #MarginVPS",
+      "caption": "\"Running my EAs 24/7 without any downtime has been a game-changer.\" 💬\n— J. Reyes, Algo / EA Trader\n\nHome PCs sleep, reboot and drop connection mid-session. On MarginVPS your EAs run on dedicated resources with a 99.99% uptime SLA, around the clock, whether your own computer is on or not.\n\nYour strategy is only as reliable as the machine running it.\n\n#AlgoTrading #ExpertAdvisor #ForexVPS #MT4 #MT5 #PropFirm #MarginVPS",
       "status": "ready_for_review",
       "render": true,
-      "testimonial_note": "Illustrative placeholder attribution (name/role invented, not a real customer) — swap in a real customer quote and get their sign-off before this goes live.",
+      "testimonial_source": "Published customer testimonial on marginvps.com (J. Reyes, Algo / EA Trader), quoted verbatim.",
       "slides": [
         {
           "kind": "cover",
           "pillar_label": "CUSTOMER STORY",
           "badge_color": "mint",
           "pager": "1 / 4",
-          "headline": "\"My EAs finally run <span class=\"accent\">like they're supposed to</span>\"",
-          "sub": "One algo trader's story."
+          "headline": "EAs running <span class=\"accent\">24/7</span>. Zero downtime.",
+          "sub": "What one algo trader told us."
         },
         {
           "kind": "testimonial",
           "badge_color": "mint",
           "pager": "2 / 4",
-          "quote_text": "My home PC used to sleep, reboot, or drop connection mid-session. Three weeks on MarginVPS and my EAs haven't missed a single signal.",
-          "name": "R. Castillo",
+          "quote_text": "Running my EAs 24/7 without any downtime has been a game-changer. Best infrastructure decision I've made as a serious trader.",
+          "name": "J. Reyes",
           "role": "Algo / EA Trader",
-          "initials": "RC"
+          "initials": "JR"
         },
         {
           "kind": "stat",
           "pillar_label": "CUSTOMER STORY",
           "badge_color": "mint",
           "pager": "3 / 4",
-          "stat_number": "0",
-          "stat_label": "MISSED SIGNALS SINCE SWITCHING",
-          "stat_context": "Weeks of dropped connections, gone."
+          "stat_number": "99.99%",
+          "stat_label": "UPTIME SLA",
+          "stat_context": "Monitored around the clock. No freezes, no missed signals."
         },
         {
           "kind": "cta",
