@@ -87,22 +87,10 @@
           "headline": "What you get",
           "body_type": "rows",
           "rows": [
-            {
-              "label": "Latency to co-located brokers",
-              "value": "<1ms"
-            },
-            {
-              "label": "Uptime SLA",
-              "value": "99.99%"
-            },
-            {
-              "label": "Platforms pre-installed",
-              "value": "MT4 / MT5"
-            },
-            {
-              "label": "Money-back guarantee",
-              "value": "14-DAY"
-            }
+            { "label": "Latency to co-located brokers", "value": "<1ms" },
+            { "label": "Uptime SLA", "value": "99.99%" },
+            { "label": "Platforms pre-installed", "value": "MT4 / MT5" },
+            { "label": "Money-back guarantee", "value": "14-DAY" }
           ]
         },
         {
@@ -120,9 +108,49 @@
       "pillar": "Stats",
       "topic": "<1ms latency to top forex brokers — see the real numbers",
       "caption": "<1ms. Not a typo. ⚡\n\nHere's what we actually measure from our data centers to the brokers you trade with — IC Markets, Pepperstone, Tickmill, Exness, Oanda, FP Markets, all under 1.1ms.\n\nCo-location isn't a buzzword here. It's a stopwatch.\n\n#ForexVPS #LowLatency #MT4 #MT5 #ForexBroker #AlgoTrading #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — '<1ms latency to top forex brokers' / 2) content (rows) — broker : ping list (IC Markets 1.00ms, Pepperstone 1.00ms, Tickmill 1.00ms, Exness 1.01ms, Oanda 1.00ms, FP Markets 1.04ms) / 3) stat — '133+' brokers measured, label 'FIND YOURS' / 4) cta — 'Check your broker's latency' + marginvps.com"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "1 / 4",
+          "headline": "<span class=\"accent\">&lt;1ms</span> latency to top forex brokers",
+          "sub": "Here's what we actually measure."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "2 / 4",
+          "headline": "Measured latency",
+          "body_type": "rows",
+          "rows": [
+            { "label": "IC Markets", "value": "1.00ms" },
+            { "label": "Pepperstone", "value": "1.00ms" },
+            { "label": "Tickmill", "value": "1.00ms" },
+            { "label": "Exness", "value": "1.01ms" },
+            { "label": "Oanda", "value": "1.00ms" },
+            { "label": "FP Markets", "value": "1.04ms" }
+          ]
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "3 / 4",
+          "stat_number": "133+",
+          "stat_label": "BROKERS MEASURED",
+          "stat_context": "Find yours — check your broker's latency."
+        },
+        {
+          "kind": "cta",
+          "tagline": "See your broker's measured latency before you commit.",
+          "button_text": "Check Your Broker",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-04",
@@ -131,9 +159,43 @@
       "pillar": "Testimonial",
       "topic": "Algo/EA trader story: running EAs 24/7 with zero downtime",
       "caption": "\"My EAs finally run like they're supposed to.\" 💬\n\nOne of our algo traders spent months fighting a home PC that slept, rebooted, and dropped connection mid-session. Three weeks on MarginVPS: EAs running 24/7, zero missed signals.\n\nYour strategy is only as reliable as the machine running it.\n\n#AlgoTrading #ExpertAdvisor #ForexVPS #MT4 #MT5 #PropFirm #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'My EAs finally run like they're supposed to' / 2) testimonial — quote about home PC sleeping/dropping connection vs 24/7 on MarginVPS, attribution 'Algo / EA trader' / 3) stat/content — 'Weeks of missed signals → 0 since switching' / 4) cta — 'Keep your EAs running. Always.'"
+      "status": "ready_for_review",
+      "render": true,
+      "testimonial_note": "Illustrative placeholder attribution (name/role invented, not a real customer) — swap in a real customer quote and get their sign-off before this goes live.",
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "CUSTOMER STORY",
+          "badge_color": "mint",
+          "pager": "1 / 4",
+          "headline": "\"My EAs finally run <span class=\"accent\">like they're supposed to</span>\"",
+          "sub": "One algo trader's story."
+        },
+        {
+          "kind": "testimonial",
+          "badge_color": "mint",
+          "pager": "2 / 4",
+          "quote_text": "My home PC used to sleep, reboot, or drop connection mid-session. Three weeks on MarginVPS and my EAs haven't missed a single signal.",
+          "name": "R. Castillo",
+          "role": "Algo / EA Trader",
+          "initials": "RC"
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "CUSTOMER STORY",
+          "badge_color": "mint",
+          "pager": "3 / 4",
+          "stat_number": "0",
+          "stat_label": "MISSED SIGNALS SINCE SWITCHING",
+          "stat_context": "Weeks of dropped connections, gone."
+        },
+        {
+          "kind": "cta",
+          "tagline": "Keep your EAs running. Always.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-05",
@@ -142,9 +204,49 @@
       "pillar": "Fact",
       "topic": "Your home Wi-Fi is the slowest part of your trade: 100-300ms+ vs <1ms co-located",
       "caption": "Your Wi-Fi is the slowest part of your trade. 🏠➡️🏢\n\nFrom home, every order crosses your ISP, your router, and the public internet before it reaches your broker — 100 to 300ms or worse. Co-located on MarginVPS, your terminal sits in the same data center. <1ms.\n\nMilliseconds aren't bragging rights. They're fill price.\n\n#ForexVPS #Slippage #LowLatency #MT4 #MT5 #Scalping #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Your home Wi-Fi is the slowest part of your trade' / 2) content (rows comparison) — 'Trading from home' latency 100-300ms+ vs 'Trading on MarginVPS' latency <1ms / 3) content — why it matters (network jitter, background traffic vs dedicated co-located resources) / 4) cta — 'Stop trading through your Wi-Fi.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "1 / 4",
+          "headline": "Your home Wi-Fi is the <span class=\"accent\">slowest part</span> of your trade",
+          "sub": "100-300ms+ from home. <1ms co-located."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "2 / 4",
+          "headline": "Home vs. co-located",
+          "body_type": "rows",
+          "rows": [
+            { "label": "Trading from home", "value": "100-300ms+" },
+            { "label": "Trading on MarginVPS", "value": "<1ms" }
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "3 / 4",
+          "headline": "Why it happens",
+          "body_type": "list",
+          "list_items": [
+            "Every order crosses your ISP, router, and the open internet",
+            "Network jitter and background traffic slow you down further",
+            "Co-located, your terminal sits inside your broker's data center"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Milliseconds aren't bragging rights. They're fill price.",
+          "button_text": "Stop Trading Through Wi-Fi",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-06",
@@ -153,9 +255,50 @@
       "pillar": "Tips",
       "topic": "Clone and run multiple MT4/MT5 terminals side by side with the MarginVPS Manager",
       "caption": "One VPS. As many terminals as you need. 🖥️🖥️\n\nThe MarginVPS Manager lets you clone any MT4/MT5 terminal and run them side by side — each one isolated, so accounts never interfere with each other. All of it auto-starts with Windows.\n\nMulti-account trading, without the juggling.\n\n#MT4 #MT5 #MultiAccount #AlgoTrading #ForexVPS #TradingTools #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Run multiple MT4/MT5 terminals side by side' / 2) content (list) — clone any terminal in seconds / run many side by side, fully isolated / launch, auto-start, or remove anytime / 3) content — why it matters for multi-account or prop firm traders / 4) cta — 'Free on every MarginVPS plan.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "1 / 4",
+          "headline": "Run multiple MT4/MT5 terminals <span class=\"accent\">side by side</span>",
+          "sub": "One VPS. As many accounts as you need."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "2 / 4",
+          "headline": "How it works",
+          "body_type": "list",
+          "list_items": [
+            "Clone any terminal in seconds",
+            "Run many side by side, fully isolated",
+            "Launch, auto-start, or remove anytime"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "3 / 4",
+          "headline": "Built for multi-account trading",
+          "body_type": "list",
+          "list_items": [
+            "Each terminal runs its own account, independent of the others",
+            "Nothing interferes — no shared sessions, no crosstalk",
+            "Ideal for prop firm challenges or managing several brokers"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Free on every MarginVPS plan.",
+          "button_text": "Get Started",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-07",
@@ -164,9 +307,49 @@
       "pillar": "Promo",
       "topic": "Prop firm trader? Co-location can mean tighter fills during challenges",
       "caption": "Running a prop firm challenge? Every fill counts. 🎯\n\nCo-location puts your terminal in the same data center as your broker, which can mean tighter fills and less slippage exactly when a challenge's rules are least forgiving.\n\nStandard and Professional plans are built for traders running multiple accounts.\n\n#PropFirm #ForexVPS #MT4 #MT5 #AlgoTrading #Slippage #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Running a prop firm challenge? Every fill counts.' / 2) content — co-location = tighter fills, less slippage, why that matters under challenge rules / 3) stat/content — Standard VPS (3-6 accounts) vs Professional VPS (7-8 accounts) quick comparison / 4) cta — 'Built for traders running multiple accounts.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "1 / 4",
+          "headline": "Running a prop firm challenge? <span class=\"accent\">Every fill counts.</span>",
+          "sub": "Co-location can tighten your fills when it matters most."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "2 / 4",
+          "headline": "Why co-location helps",
+          "body_type": "list",
+          "list_items": [
+            "Your terminal sits next to your broker's server",
+            "Tighter fills, less slippage, exactly when rules are least forgiving",
+            "No home connection or ISP jitter in the way"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "3 / 4",
+          "headline": "Pick your plan",
+          "body_type": "rows",
+          "rows": [
+            { "label": "Standard VPS", "value": "3-6 accounts" },
+            { "label": "Professional VPS", "value": "7-8 accounts" }
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Built for traders running multiple accounts.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-08",
@@ -175,9 +358,46 @@
       "pillar": "Stats",
       "topic": "99.99% uptime SLA — what that actually means for your EAs",
       "caption": "99.99% uptime. Here's what that actually means. 📊\n\nNo freezes during volatility spikes. No crashes mid-session. No missed signals because your VPS decided to restart. That's the bar we hold for every plan, monitored around the clock.\n\nYour EAs don't get days off. Neither should your infrastructure.\n\n#Uptime #ForexVPS #MT4 #MT5 #AlgoTrading #ExpertAdvisor #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — '99.99% uptime SLA' / 2) stat — big '99.99%', label 'UPTIME SLA, MONITORED 24/7' / 3) content (list) — no freezes during volatility / no shared CPU cycles / dedicated resources, never throttled / 4) cta — 'Infrastructure that doesn't take days off.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "1 / 4",
+          "headline": "<span class=\"accent\">99.99%</span> uptime SLA",
+          "sub": "Here's what that actually means."
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "2 / 4",
+          "stat_number": "99.99%",
+          "stat_label": "UPTIME SLA, MONITORED 24/7",
+          "stat_context": "No freezes, no crashes, no missed signals."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "3 / 4",
+          "headline": "What that buys you",
+          "body_type": "list",
+          "list_items": [
+            "No freezes during volatility spikes",
+            "No shared CPU cycles fighting your terminal",
+            "Dedicated resources, never throttled"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Infrastructure that doesn't take days off.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-09",
@@ -186,9 +406,43 @@
       "pillar": "Testimonial",
       "topic": "Multi-account trader: 3 terminals across 2 brokers for a year, zero missed sessions",
       "caption": "\"Three terminals, two brokers, one VPS, zero missed sessions.\" 📈\n\nA multi-account trader has been running three MT4/MT5 terminals across two different brokers on a single MarginVPS instance for over a year — without a single dropped session.\n\nThat's what dedicated resources and zero noisy neighbors actually buy you.\n\n#MultiAccount #ForexVPS #MT4 #MT5 #AlgoTrading #ForexTrading #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Three terminals. Two brokers. One VPS. A full year.' / 2) testimonial — quote + attribution 'Multi-account trader' / 3) stat — '1 year, 0 missed sessions' / 4) cta — 'Run every account from one place.'"
+      "status": "ready_for_review",
+      "render": true,
+      "testimonial_note": "Illustrative placeholder attribution (name/role invented, not a real customer) — swap in a real customer quote and get their sign-off before this goes live.",
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "CUSTOMER STORY",
+          "badge_color": "mint",
+          "pager": "1 / 4",
+          "headline": "Three terminals. Two brokers. <span class=\"accent\">One VPS.</span>",
+          "sub": "A full year, zero missed sessions."
+        },
+        {
+          "kind": "testimonial",
+          "badge_color": "mint",
+          "pager": "2 / 4",
+          "quote_text": "I run three MT4/MT5 terminals across two different brokers on a single MarginVPS instance. Over a year now, without a single dropped session.",
+          "name": "M. Owens",
+          "role": "Multi-Account Trader",
+          "initials": "MO"
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "CUSTOMER STORY",
+          "badge_color": "mint",
+          "pager": "3 / 4",
+          "stat_number": "1 yr",
+          "stat_label": "ZERO MISSED SESSIONS",
+          "stat_context": "Three terminals, two brokers, one VPS."
+        },
+        {
+          "kind": "cta",
+          "tagline": "Run every account from one place.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-10",
@@ -197,9 +451,50 @@
       "pillar": "Fact",
       "topic": "Forex VPS vs a regular VPS: what's actually different",
       "caption": "A Forex VPS isn't just 'a VPS for trading.' 🤔\n\nA regular VPS gets you a server. A Forex VPS gets you a server co-located inside the same data center as your broker, with MT4/MT5 pre-installed and support that actually understands trading infrastructure — not just generic troubleshooting.\n\nThe difference shows up in your fills.\n\n#ForexVPS #MT4 #MT5 #TechExplained #ForexTrading #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Forex VPS vs a regular VPS: what's actually different' / 2) content (rows comparison) — co-location near brokers / platform pre-installed / trading-aware support, vs generic hosting's general-purpose setup / 3) content — when a regular VPS isn't enough for trading / 4) cta — 'Built specifically for traders.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "1 / 4",
+          "headline": "A Forex VPS isn't just <span class=\"accent\">\"a VPS for trading\"</span>",
+          "sub": "Here's what actually makes it different."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "2 / 4",
+          "headline": "Forex VPS vs. regular VPS",
+          "body_type": "rows",
+          "rows": [
+            { "label": "Location", "value": "Co-located w/ broker" },
+            { "label": "Platforms", "value": "MT4/MT5 ready" },
+            { "label": "Support", "value": "Trading-aware" }
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "3 / 4",
+          "headline": "When a regular VPS isn't enough",
+          "body_type": "list",
+          "list_items": [
+            "Generic hosting isn't tuned for order execution",
+            "Support won't know what slippage or an EA is",
+            "No co-location means no latency advantage"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Built specifically for traders.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-11",
@@ -208,9 +503,50 @@
       "pillar": "Tips",
       "topic": "Free Windows reinstall in about a minute — when you'd actually use it",
       "caption": "Need a clean slate? About a minute. 🔄\n\nMessy install, leftover files from testing a dozen EAs, or just want to start fresh — a free Windows reinstall from your dashboard takes about a minute, no ticket required.\n\nUse it as often as you need. It's included.\n\n#ForexVPS #MT4 #MT5 #TradingTools #AlgoTrading #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Free Windows reinstall, about a minute' / 2) content (list) — when to use it: leftover EA clutter / testing gone wrong / just want a clean start / 3) content — how it works: one click in your dashboard, no support ticket / 4) cta — 'Included free on every plan.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "1 / 4",
+          "headline": "Free Windows reinstall, <span class=\"accent\">about a minute</span>",
+          "sub": "No ticket required."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "2 / 4",
+          "headline": "When to use it",
+          "body_type": "list",
+          "list_items": [
+            "Leftover clutter from testing a dozen EAs",
+            "A setup that went sideways",
+            "You just want a clean start"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "3 / 4",
+          "headline": "How it works",
+          "body_type": "list",
+          "list_items": [
+            "One click from your dashboard",
+            "Fresh copy of Windows, ready in about a minute",
+            "Use it as often as you need — it's included"
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Included free on every plan.",
+          "button_text": "Get Started",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-12",
@@ -219,9 +555,54 @@
       "pillar": "Promo",
       "topic": "Move your VPS to a new data center free, anytime — broker changed servers? So can you",
       "caption": "Broker changed servers? So can you. 📍\n\nMove your entire VPS — files, EAs, and settings included — to another data center in one click, free. It usually takes about 60 minutes, and you don't lose a thing.\n\nSeven financial hubs to choose from: LD4, NY4, FR2, TY3, SG1, HK1, DUB1.\n\n#ForexVPS #MT4 #MT5 #LowLatency #ForexBroker #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Broker changed servers? So can you.' / 2) content (list) — one click to move your whole VPS / files, EAs and settings included / usually takes about 60 minutes / free, anytime / 3) content (rows) — 7 data centers: LD4, NY4, FR2, TY3, SG1, HK1, DUB1 / 4) cta — 'Stay co-located. Always.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "1 / 4",
+          "headline": "Broker changed servers? <span class=\"accent\">So can you.</span>",
+          "sub": "Move your whole VPS, free, anytime."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "2 / 4",
+          "headline": "What moves with you",
+          "body_type": "list",
+          "list_items": [
+            "One click to move your whole VPS",
+            "Files, EAs and settings included",
+            "Usually takes about 60 minutes — free"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "PROMO",
+          "badge_color": "green",
+          "pager": "3 / 4",
+          "headline": "7 financial hubs",
+          "body_type": "rows",
+          "rows": [
+            { "label": "London", "value": "LD4" },
+            { "label": "New York", "value": "NY4" },
+            { "label": "Frankfurt", "value": "FR2" },
+            { "label": "Tokyo", "value": "TY3" },
+            { "label": "Singapore", "value": "SG1" },
+            { "label": "Hong Kong", "value": "HK1" },
+            { "label": "Dublin", "value": "DUB1" }
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Stay co-located. Always.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-13",
@@ -230,9 +611,50 @@
       "pillar": "Stats",
       "topic": "7 global data centers co-located with major brokers: LD4, NY4, FR2, TY3, SG1, HK1, DUB1",
       "caption": "Seven financial hubs. One dashboard. 🌍\n\nLD4, NY4, FR2, TY3, SG1, HK1, DUB1 — our data centers sit inside the same hubs where major forex brokers are hosted, so you can pick the one closest to yours.\n\nNot sure which one? We'll measure it for you.\n\n#ForexVPS #GlobalNetwork #MT4 #MT5 #ForexBroker #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — '7 global data centers, co-located with major brokers' / 2) content (rows) — LD4 London, NY4 New York, FR2 Frankfurt, TY3 Tokyo, SG1 Singapore, HK1 Hong Kong, DUB1 Dublin / 3) stat — fastest measured pings callout, e.g. 'Hong Kong — 0.24ms' / 4) cta — \"Check your broker's latency — we'll show you the fastest location.\""
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "1 / 4",
+          "headline": "<span class=\"accent\">7 global data centers</span>, co-located with major brokers",
+          "sub": "Pick the one closest to your broker."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "2 / 4",
+          "headline": "Our network",
+          "body_type": "rows",
+          "rows": [
+            { "label": "London", "value": "LD4" },
+            { "label": "New York", "value": "NY4" },
+            { "label": "Frankfurt", "value": "FR2" },
+            { "label": "Tokyo", "value": "TY3" },
+            { "label": "Singapore", "value": "SG1" },
+            { "label": "Hong Kong", "value": "HK1" },
+            { "label": "Dublin", "value": "DUB1" }
+          ]
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "STATS",
+          "badge_color": "mint",
+          "pager": "3 / 4",
+          "stat_number": "0.24ms",
+          "stat_label": "FASTEST MEASURED — HONG KONG",
+          "stat_context": "Real latency, measured from our data centers."
+        },
+        {
+          "kind": "cta",
+          "tagline": "Not sure which one? We'll measure it for you.",
+          "button_text": "Check Your Broker",
+          "url": "marginvps.com"
+        }
+      ]
     },
     {
       "id": "day-14",
@@ -241,9 +663,49 @@
       "pillar": "Fact",
       "topic": "Why milliseconds matter: the real cost of slippage from a home connection",
       "caption": "Milliseconds aren't bragging rights. They're money. 💸\n\nEvery millisecond between your order and your broker's server is a window for the price to move against you — that's slippage. Shrink the distance, shrink the window.\n\nCo-location doesn't guarantee a win. It just stops the clock from working against you.\n\n#Slippage #ForexVPS #Scalping #MT4 #MT5 #AlgoTrading #MarginVPS",
-      "status": "draft",
-      "render": false,
-      "slide_breakdown": "1) cover — 'Why milliseconds matter: the real cost of slippage' / 2) content — what slippage is and how latency widens the window for price to move / 3) content (rows comparison) — home connection 100-300ms+ vs co-located <1ms, framed as slippage exposure / 4) cta — 'Close the gap. Co-locate with your broker.'"
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "1 / 4",
+          "headline": "Why <span class=\"accent\">milliseconds</span> matter",
+          "sub": "The real cost of slippage."
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "2 / 4",
+          "headline": "What slippage actually is",
+          "body_type": "list",
+          "list_items": [
+            "The gap between your order and your broker's server is time",
+            "Every millisecond is a window for price to move against you",
+            "Shrink the distance, shrink the window"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "FACT",
+          "badge_color": "mintlight",
+          "pager": "3 / 4",
+          "headline": "Home vs. co-located",
+          "body_type": "rows",
+          "rows": [
+            { "label": "Home connection", "value": "100-300ms+" },
+            { "label": "Co-located on MarginVPS", "value": "<1ms" }
+          ]
+        },
+        {
+          "kind": "cta",
+          "tagline": "Co-location doesn't guarantee a win. It stops the clock working against you.",
+          "button_text": "Close The Gap",
+          "url": "marginvps.com"
+        }
+      ]
     }
   ]
 }
