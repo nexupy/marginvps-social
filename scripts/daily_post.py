@@ -102,11 +102,14 @@ def post_facebook(entry, env, dry_run):
     return call("POST", f"{page_id}/feed", params)["id"]
 
 
-def pick_entry(schedule):
+PLATFORM_FIELDS = {"instagram": "ig_media_id", "facebook": "fb_post_id"}
+
+
+def pick_entry(schedule, platforms):
     for entry in sorted(schedule, key=lambda e: e["day_number"]):
         if entry.get("status") != "approved":
             continue
-        if entry.get("ig_media_id") and entry.get("fb_post_id"):
+        if all(entry.get(PLATFORM_FIELDS[p]) for p in platforms):
             continue
         if entry.get("testimonial_note"):
             log(f"skipping {entry['id']}: testimonial needs a real, approved customer quote")
@@ -118,12 +121,15 @@ def pick_entry(schedule):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--platforms", default="instagram,facebook",
+                    help="comma-separated subset of instagram,facebook")
     args = ap.parse_args()
+    platforms = {p.strip() for p in args.platforms.split(",")}
 
     with open(SCHEDULE_PATH, encoding="utf-8") as f:
         schedule = json.load(f)
 
-    entry = pick_entry(schedule)
+    entry = pick_entry(schedule, platforms)
     if not entry:
         log("nothing approved and unposted; done")
         return
@@ -134,6 +140,8 @@ def main():
 
     for platform, field, fn in (("instagram", "ig_media_id", post_instagram),
                                  ("facebook", "fb_post_id", post_facebook)):
+        if platform not in platforms:
+            continue
         if entry.get(field):
             log(f"  {platform}: already posted ({entry[field]})")
             continue
