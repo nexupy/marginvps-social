@@ -135,13 +135,139 @@ def render_cta(slide):
     """
 
 
+def side_label_html(slide):
+    return f'<div class="side-label">MYTH <b>vs</b> FACT &nbsp;&middot;&nbsp; {slide["pager"]}</div>'
+
+
+def render_myth_cover(slide):
+    return f"""
+    {side_label_html(slide)}
+    {wordmark_html()}
+    <div class="cover-bottom">
+      <div class="headline" style="font-size:92px;">{slide['headline']}</div>
+      <div class="sub">{slide.get('sub', '')}</div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">swipe &#8594;</div>
+    </div>
+    """
+
+
+def render_myth(slide):
+    return f"""
+    {side_label_html(slide)}
+    {wordmark_html()}
+    <div class="split">
+      <div class="half myth-half">
+        <div class="tag myth">MYTH</div>
+        <div class="myth-text">{slide['myth']}</div>
+      </div>
+      <div class="half fact-half">
+        <div class="tag fact">FACT</div>
+        <div class="fact-text">{slide['fact']}</div>
+        <div class="fact-detail">{slide.get('detail', '')}</div>
+      </div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">{slide['pager']}</div>
+    </div>
+    """
+
+
+def render_step_cover(slide):
+    return f"""
+    <div class="giant-num step-cover-num">{slide['big_number']}</div>
+    {wordmark_html()}
+    <div class="cover-bottom">
+      <div class="headline" style="font-size:88px;">{slide['headline']}</div>
+      <div class="sub">{slide.get('sub', '')}</div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">swipe &#8594;</div>
+    </div>
+    """
+
+
+def render_step(slide):
+    return f"""
+    <div class="topbar">{wordmark_html()}<div class="pager">{slide['pager']}</div></div>
+    <div class="step-row">
+      <div class="giant-num">{slide['number']}</div>
+      <div class="step-body">
+        <div class="step-kicker">STEP {slide['number']}</div>
+        <div class="step-title">{slide['title']}</div>
+        <div class="step-desc">{slide['desc']}</div>
+        <div class="pill">{slide['pill']}</div>
+      </div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">{slide['pager']}</div>
+    </div>
+    """
+
+
+def render_plan_cover(slide):
+    return f"""
+    {wordmark_html()}
+    <div class="price-sticker">
+      <div class="from">FROM</div>
+      <div class="amt">{slide['sticker_amount']}</div>
+      <div class="note">{slide['sticker_note']}</div>
+    </div>
+    <div class="center-title">
+      <div class="headline">{slide['headline']}</div>
+      <div class="sub" style="max-width:80%;">{slide.get('sub', '')}</div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">swipe &#8594;</div>
+    </div>
+    """
+
+
+def render_plan(slide):
+    specs = "".join(
+        f'<div class="spec"><div class="k">{k}</div><div class="v">{v}</div></div>'
+        for k, v in slide["specs"]
+    )
+    flag = f'<div class="plan-flag">{slide["flag"]}</div>' if slide.get("flag") else ""
+    featured = " featured" if slide.get("flag") else ""
+    return f"""
+    <div class="topbar">{wordmark_html()}<div class="pager">{slide['pager']}</div></div>
+    <div class="grow" style="gap:34px;">
+      <div class="plan-accounts"><span class="n">{slide['accounts']}</span><span class="t">trading<br>accounts</span></div>
+      <div class="plan-card{featured}">
+        <div class="plan-head"><div class="plan-name">{slide['plan_name']}</div>{flag}</div>
+        <div class="spec-grid">{specs}</div>
+        <div class="plan-price"><span class="amt">{slide['price']}</span><span class="per">/mo</span></div>
+        <div class="plan-fine">{slide['fine_print']}</div>
+      </div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-url">marginvps.com</div>
+      <div class="footer-url">{slide['pager']}</div>
+    </div>
+    """
+
+
 RENDERERS = {
     "cover": render_cover,
     "content": render_content,
     "stat": render_stat,
     "testimonial": render_testimonial,
     "cta": render_cta,
+    "myth_cover": render_myth_cover,
+    "myth": render_myth,
+    "step_cover": render_step_cover,
+    "step": render_step,
+    "plan_cover": render_plan_cover,
+    "plan": render_plan,
 }
+SIDE_LABEL_KINDS = {"myth_cover", "myth"}
 
 
 def badge_color_hex(slide):
@@ -152,9 +278,10 @@ def badge_color_hex(slide):
 def build_slide_html(template_src, slide):
     inner = RENDERERS[slide["kind"]](slide)
     color = badge_color_hex(slide)
+    frame_class = "frame side" if slide["kind"] in SIDE_LABEL_KINDS else "frame"
     html = template_src.replace(
         '<div class="frame" id="frame"></div>',
-        f'<div class="frame" id="frame" style="--badge-color:{color};">{inner}</div>',
+        f'<div class="{frame_class}" id="frame" style="--badge-color:{color};">{inner}</div>',
     )
     return html
 
@@ -167,7 +294,8 @@ def render_day(day, template_src, browser):
         html = build_slide_html(template_src, slide)
         html_path = EXPORT_DIR / f"{day_id}_slide{idx}.html"
         html_path.write_text(html, encoding="utf-8")
-        page.goto(html_path.resolve().as_uri())
+        page.goto(html_path.resolve().as_uri(), wait_until="networkidle")
+        page.evaluate("document.fonts.ready")
         page.wait_for_timeout(250)
         jpg_path = EXPORT_DIR / f"{day_id}_slide{idx}.jpg"
         page.screenshot(path=str(jpg_path), type="jpeg", quality=92)

@@ -206,6 +206,86 @@
 
   .grow{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:40px; }
   .stack{ display:flex; flex-direction:column; gap:40px; }
+
+  /* myth vs fact: vertical side label + split halves */
+  .side-label{
+    position:absolute; left:34px; top:50%;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    font-family:"Geist Mono", monospace; font-size:22px; letter-spacing:0.32em;
+    color: var(--text-dim); text-transform:uppercase; white-space:nowrap;
+  }
+  .side-label b{ color: var(--mint-light); font-weight:500; }
+  .frame.side{ padding-left:112px; }
+  .split{ flex:1; display:flex; flex-direction:column; margin: 36px 0; }
+  .split .half{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:26px; }
+  .split .myth-half{ padding-bottom:40px; }
+  .split .fact-half{ padding-top:40px; border-top: 4px solid var(--green); }
+  .tag{
+    font-family:"Geist Mono", monospace; font-size:24px; letter-spacing:0.18em;
+    width:fit-content; padding:8px 18px; border-radius:8px;
+  }
+  .tag.myth{ color: rgba(255,255,255,0.5); border:1px solid rgba(255,255,255,0.22); }
+  .tag.fact{ color:#050705; background: var(--green); font-weight:500; }
+  .myth-text{
+    font-size:54px; line-height:1.15; font-weight:600; letter-spacing:-0.01em;
+    color: rgba(255,255,255,0.42);
+    text-decoration: line-through; text-decoration-color: rgba(255,90,90,0.75); text-decoration-thickness:5px;
+  }
+  .fact-text{ font-size:56px; line-height:1.12; font-weight:700; letter-spacing:-0.02em; }
+  .fact-text .accent{ color: var(--mint-light); white-space:nowrap; }
+  .fact-detail{ font-size:29px; line-height:1.45; color:var(--text-dim); font-weight:500; max-width:95%; }
+  .cover-bottom{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:30px; padding-bottom:30px; }
+
+  /* steps: giant outlined numeral */
+  .giant-num{
+    font-family:"Geist", Arial, sans-serif; font-weight:700;
+    color: transparent; -webkit-text-stroke: 4px var(--mint);
+    line-height:0.8; letter-spacing:-0.04em;
+  }
+  .step-cover-num{ font-size:760px; position:absolute; right:40px; top:40px; opacity:0.9; }
+  .step-row{ flex:1; display:flex; align-items:center; gap:56px; }
+  .step-row .giant-num{ font-size:560px; flex-shrink:0; width:330px; text-align:center; }
+  .step-body{ display:flex; flex-direction:column; gap:26px; }
+  .step-kicker{ font-family:"Geist Mono", monospace; font-size:24px; letter-spacing:0.2em; color:var(--mint-light); }
+  .step-title{ font-size:62px; line-height:1.08; font-weight:700; letter-spacing:-0.02em; }
+  .step-desc{ font-size:30px; line-height:1.45; color:var(--text-dim); font-weight:500; }
+  .pill{
+    font-family:"Geist Mono", monospace; font-size:26px; width:fit-content;
+    color: var(--mint-light); background: rgba(44,249,130,0.1);
+    border:1px solid rgba(44,249,130,0.35); border-radius:999px; padding:10px 22px;
+  }
+
+  /* plans: price sticker + stacked card */
+  .price-sticker{
+    position:absolute; top:150px; right:84px; transform: rotate(8deg);
+    background: var(--green); color:#050705; border-radius:18px;
+    padding:22px 30px; text-align:center; box-shadow: 0 18px 50px rgba(18,224,104,0.25);
+  }
+  .price-sticker .from{ font-family:"Geist Mono", monospace; font-size:22px; letter-spacing:0.1em; }
+  .price-sticker .amt{ font-size:58px; font-weight:700; letter-spacing:-0.02em; line-height:1.05; }
+  .price-sticker .note{ font-family:"Geist Mono", monospace; font-size:18px; }
+  .center-title{ flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:30px; }
+  .center-title .headline{ font-size:96px; }
+  .plan-accounts{ display:flex; align-items:baseline; gap:22px; }
+  .plan-accounts .n{ font-size:190px; font-weight:700; letter-spacing:-0.03em; color:var(--mint-light); line-height:1; }
+  .plan-accounts .t{ font-size:40px; font-weight:600; color:var(--text-dim); }
+  .plan-card{
+    background: var(--bg-raised); border:1px solid var(--hairline); border-radius:28px;
+    padding:52px 50px; display:flex; flex-direction:column; gap:36px;
+  }
+  .plan-card.featured{ border:2px solid var(--green); box-shadow: 0 0 0 6px rgba(18,224,104,0.08); }
+  .plan-head{ display:flex; justify-content:space-between; align-items:center; }
+  .plan-name{ font-family:"Geist Mono", monospace; font-size:30px; letter-spacing:0.14em; }
+  .plan-flag{ font-family:"Geist Mono", monospace; font-size:20px; letter-spacing:0.12em; color:#050705; background:var(--green); padding:8px 16px; border-radius:999px; }
+  .spec-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+  .spec{ border:1px solid var(--hairline); border-radius:18px; padding:26px 24px; }
+  .spec .k{ font-family:"Geist Mono", monospace; font-size:21px; color:var(--text-dim); letter-spacing:0.1em; }
+  .spec .v{ font-size:38px; font-weight:700; margin-top:8px; }
+  .plan-price{ display:flex; align-items:baseline; gap:12px; }
+  .plan-price .amt{ font-size:128px; font-weight:700; letter-spacing:-0.03em; line-height:1; }
+  .plan-price .per{ font-size:38px; color:var(--text-dim); font-weight:600; }
+  .plan-fine{ font-family:"Geist Mono", monospace; font-size:24px; color:var(--text-dim); line-height:1.5; }
 </style>
 </head>
 <body>

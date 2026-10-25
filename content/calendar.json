@@ -87,10 +87,22 @@
           "headline": "What you get",
           "body_type": "rows",
           "rows": [
-            { "label": "Latency to co-located brokers", "value": "<1ms" },
-            { "label": "Uptime SLA", "value": "99.99%" },
-            { "label": "Platforms pre-installed", "value": "MT4 / MT5" },
-            { "label": "Money-back guarantee", "value": "14-DAY" }
+            {
+              "label": "Latency to co-located brokers",
+              "value": "<1ms"
+            },
+            {
+              "label": "Uptime SLA",
+              "value": "99.99%"
+            },
+            {
+              "label": "Platforms pre-installed",
+              "value": "MT4 / MT5"
+            },
+            {
+              "label": "Money-back guarantee",
+              "value": "14-DAY"
+            }
           ]
         },
         {
@@ -127,12 +139,30 @@
           "headline": "Measured latency",
           "body_type": "rows",
           "rows": [
-            { "label": "IC Markets", "value": "1.00ms" },
-            { "label": "Pepperstone", "value": "1.00ms" },
-            { "label": "Tickmill", "value": "1.00ms" },
-            { "label": "Exness", "value": "1.01ms" },
-            { "label": "Oanda", "value": "1.00ms" },
-            { "label": "FP Markets", "value": "1.04ms" }
+            {
+              "label": "IC Markets",
+              "value": "1.00ms"
+            },
+            {
+              "label": "Pepperstone",
+              "value": "1.00ms"
+            },
+            {
+              "label": "Tickmill",
+              "value": "1.00ms"
+            },
+            {
+              "label": "Exness",
+              "value": "1.01ms"
+            },
+            {
+              "label": "Oanda",
+              "value": "1.00ms"
+            },
+            {
+              "label": "FP Markets",
+              "value": "1.04ms"
+            }
           ]
         },
         {
@@ -223,8 +253,14 @@
           "headline": "Home vs. co-located",
           "body_type": "rows",
           "rows": [
-            { "label": "Trading from home", "value": "100-300ms+" },
-            { "label": "Trading on MarginVPS", "value": "<1ms" }
+            {
+              "label": "Trading from home",
+              "value": "100-300ms+"
+            },
+            {
+              "label": "Trading on MarginVPS",
+              "value": "<1ms"
+            }
           ]
         },
         {
@@ -339,8 +375,14 @@
           "headline": "Pick your plan",
           "body_type": "rows",
           "rows": [
-            { "label": "Standard VPS", "value": "3-6 accounts" },
-            { "label": "Professional VPS", "value": "7-8 accounts" }
+            {
+              "label": "Standard VPS",
+              "value": "3-6 accounts"
+            },
+            {
+              "label": "Professional VPS",
+              "value": "7-8 accounts"
+            }
           ]
         },
         {
@@ -470,9 +512,18 @@
           "headline": "Forex VPS vs. regular VPS",
           "body_type": "rows",
           "rows": [
-            { "label": "Location", "value": "Co-located w/ broker" },
-            { "label": "Platforms", "value": "MT4/MT5 ready" },
-            { "label": "Support", "value": "Trading-aware" }
+            {
+              "label": "Location",
+              "value": "Co-located w/ broker"
+            },
+            {
+              "label": "Platforms",
+              "value": "MT4/MT5 ready"
+            },
+            {
+              "label": "Support",
+              "value": "Trading-aware"
+            }
           ]
         },
         {
@@ -587,13 +638,34 @@
           "headline": "7 financial hubs",
           "body_type": "rows",
           "rows": [
-            { "label": "London", "value": "LD4" },
-            { "label": "New York", "value": "NY4" },
-            { "label": "Frankfurt", "value": "FR2" },
-            { "label": "Tokyo", "value": "TY3" },
-            { "label": "Singapore", "value": "SG1" },
-            { "label": "Hong Kong", "value": "HK1" },
-            { "label": "Dublin", "value": "DUB1" }
+            {
+              "label": "London",
+              "value": "LD4"
+            },
+            {
+              "label": "New York",
+              "value": "NY4"
+            },
+            {
+              "label": "Frankfurt",
+              "value": "FR2"
+            },
+            {
+              "label": "Tokyo",
+              "value": "TY3"
+            },
+            {
+              "label": "Singapore",
+              "value": "SG1"
+            },
+            {
+              "label": "Hong Kong",
+              "value": "HK1"
+            },
+            {
+              "label": "Dublin",
+              "value": "DUB1"
+            }
           ]
         },
         {
@@ -630,13 +702,34 @@
           "headline": "Our network",
           "body_type": "rows",
           "rows": [
-            { "label": "London", "value": "LD4" },
-            { "label": "New York", "value": "NY4" },
-            { "label": "Frankfurt", "value": "FR2" },
-            { "label": "Tokyo", "value": "TY3" },
-            { "label": "Singapore", "value": "SG1" },
-            { "label": "Hong Kong", "value": "HK1" },
-            { "label": "Dublin", "value": "DUB1" }
+            {
+              "label": "London",
+              "value": "LD4"
+            },
+            {
+              "label": "New York",
+              "value": "NY4"
+            },
+            {
+              "label": "Frankfurt",
+              "value": "FR2"
+            },
+            {
+              "label": "Tokyo",
+              "value": "TY3"
+            },
+            {
+              "label": "Singapore",
+              "value": "SG1"
+            },
+            {
+              "label": "Hong Kong",
+              "value": "HK1"
+            },
+            {
+              "label": "Dublin",
+              "value": "DUB1"
+            }
           ]
         },
         {
@@ -695,14 +788,207 @@
           "headline": "Home vs. co-located",
           "body_type": "rows",
           "rows": [
-            { "label": "Home connection", "value": "100-300ms+" },
-            { "label": "Co-located on MarginVPS", "value": "<1ms" }
+            {
+              "label": "Home connection",
+              "value": "100-300ms+"
+            },
+            {
+              "label": "Co-located on MarginVPS",
+              "value": "<1ms"
+            }
           ]
         },
         {
           "kind": "cta",
           "tagline": "Co-location doesn't guarantee a win. It stops the clock working against you.",
           "button_text": "Close The Gap",
+          "url": "marginvps.com"
+        }
+      ]
+    },
+    {
+      "id": "day-15",
+      "day_number": 15,
+      "date": "2026-10-25",
+      "pillar": "Fact",
+      "topic": "Myth vs Fact: 3 Forex VPS myths traders still believe",
+      "caption": "3 Forex VPS myths we hear all the time. 🧐\n\nMyth: your home PC is fine for EAs.\nFact: home connections run 100–300ms+ to your broker. Co-located on MarginVPS it's <1ms.\n\nMyth: a VPS needs server admin skills.\nFact: it's ready in under 60 seconds with MT4 & MT5 pre-installed.\n\nMyth: switching brokers means starting over.\nFact: move to another data center free, files and EAs included.\n\nWhich one did you believe? 👇\n\n#ForexVPS #MT4 #MT5 #AlgoTrading #ForexTrading #ExpertAdvisor #MarginVPS",
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "myth_cover",
+          "pager": "1 / 5",
+          "headline": "3 Forex VPS myths traders <span class=\"accent\">still believe</span>",
+          "sub": "Swipe to see the facts."
+        },
+        {
+          "kind": "myth",
+          "pager": "2 / 5",
+          "myth": "My home PC is fine for running my EAs.",
+          "fact": "Home connections run <span class=\"accent\">100–300ms+</span> to your broker.",
+          "detail": "Co-located on MarginVPS: &lt;1ms, a 99.99% uptime SLA, and your EAs keep running when your PC is off."
+        },
+        {
+          "kind": "myth",
+          "pager": "3 / 5",
+          "myth": "A VPS needs server admin skills.",
+          "fact": "Ready in <span class=\"accent\">under 60 seconds</span>, MT4 &amp; MT5 pre-installed.",
+          "detail": "Start, stop, reboot or reinstall Windows in one click from your dashboard. No tickets."
+        },
+        {
+          "kind": "myth",
+          "pager": "4 / 5",
+          "myth": "Switching brokers means starting over.",
+          "fact": "Move your VPS to another data center <span class=\"accent\">free</span>.",
+          "detail": "Files, EAs and settings come with it. It usually takes about 60 minutes."
+        },
+        {
+          "kind": "cta",
+          "tagline": "Your trading VPS can be live in 60 seconds.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
+    },
+    {
+      "id": "day-16",
+      "day_number": 16,
+      "date": "2026-10-26",
+      "pillar": "Tips",
+      "topic": "From checkout to live trading in 3 steps",
+      "caption": "Checkout to live trading in 3 steps. ⏱️\n\n1. Choose your plan and the data center closest to your broker (checkout takes about 2 minutes).\n2. Your VPS is ready in under 60 seconds, with MT4 & MT5 already installed.\n3. Upload your EAs from the dashboard in one click and trade 24/7.\n\nNo server admin required.\n\n#ForexVPS #MT4 #MT5 #AlgoTrading #TradingTools #ExpertAdvisor #MarginVPS",
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "step_cover",
+          "pager": "1 / 5",
+          "big_number": "3",
+          "headline": "From checkout to live trading in <span class=\"accent\">3 steps</span>",
+          "sub": "No server admin required."
+        },
+        {
+          "kind": "step",
+          "pager": "2 / 5",
+          "number": "1",
+          "title": "Choose your plan and location",
+          "desc": "Pick the data center closest to your broker's servers.",
+          "pill": "~2 min checkout"
+        },
+        {
+          "kind": "step",
+          "pager": "3 / 5",
+          "number": "2",
+          "title": "Your VPS is ready",
+          "desc": "Log in with Remote Desktop. MT4, MT5 and the MetaTrader Manager are already installed.",
+          "pill": "&lt;60 seconds"
+        },
+        {
+          "kind": "step",
+          "pager": "4 / 5",
+          "number": "3",
+          "title": "Upload your EAs and trade",
+          "desc": "Send EAs from your dashboard in one click, connect to your broker, and trade 24/7.",
+          "pill": "1-click upload"
+        },
+        {
+          "kind": "cta",
+          "tagline": "Live next to your broker in minutes.",
+          "button_text": "Launch Your VPS",
+          "url": "marginvps.com"
+        }
+      ]
+    },
+    {
+      "id": "day-17",
+      "day_number": 17,
+      "date": "2026-10-27",
+      "pillar": "Promo",
+      "topic": "Which plan fits your setup? Basic, Standard, Professional",
+      "caption": "Which MarginVPS plan fits your setup? 🤔\n\nBasic: 1–2 trading accounts, $16.67/mo\nStandard: 3–6 accounts, $26.67/mo (most popular)\nProfessional: 7–8 accounts, $40/mo\n\nPrices shown are billed yearly, which saves 20% vs monthly billing. Every plan runs on dedicated resources with MT4 & MT5 pre-installed and a 14-day money-back guarantee.\n\n#ForexVPS #MT4 #MT5 #PropFirm #AlgoTrading #ForexTrading #MarginVPS",
+      "status": "ready_for_review",
+      "render": true,
+      "slides": [
+        {
+          "kind": "plan_cover",
+          "pager": "1 / 5",
+          "headline": "Which plan fits <span class=\"accent\">your setup?</span>",
+          "sub": "Pick by how many trading accounts you run.",
+          "sticker_amount": "$16.67/mo",
+          "sticker_note": "billed yearly"
+        },
+        {
+          "kind": "plan",
+          "pager": "2 / 5",
+          "accounts": "1–2",
+          "plan_name": "BASIC VPS",
+          "specs": [
+            [
+              "CPU",
+              "2 cores"
+            ],
+            [
+              "RAM",
+              "2 GB DDR5"
+            ],
+            [
+              "NVMe",
+              "60 GB"
+            ]
+          ],
+          "price": "$16.67",
+          "fine_print": "$200 billed yearly &middot; $20.83/mo billed monthly"
+        },
+        {
+          "kind": "plan",
+          "pager": "3 / 5",
+          "accounts": "3–6",
+          "plan_name": "STANDARD VPS",
+          "flag": "MOST POPULAR",
+          "specs": [
+            [
+              "CPU",
+              "2 cores"
+            ],
+            [
+              "RAM",
+              "4 GB DDR5"
+            ],
+            [
+              "NVMe",
+              "70 GB"
+            ]
+          ],
+          "price": "$26.67",
+          "fine_print": "$320 billed yearly &middot; $33.33/mo billed monthly"
+        },
+        {
+          "kind": "plan",
+          "pager": "4 / 5",
+          "accounts": "7–8",
+          "plan_name": "PROFESSIONAL VPS",
+          "specs": [
+            [
+              "CPU",
+              "4 cores"
+            ],
+            [
+              "RAM",
+              "8 GB DDR5"
+            ],
+            [
+              "NVMe",
+              "100 GB"
+            ]
+          ],
+          "price": "$40.00",
+          "fine_print": "$480 billed yearly &middot; $50.00/mo billed monthly"
+        },
+        {
+          "kind": "cta",
+          "tagline": "Every plan: dedicated resources, MT4 &amp; MT5 pre-installed, 14-day money-back guarantee.",
+          "button_text": "Compare Plans",
           "url": "marginvps.com"
         }
       ]
