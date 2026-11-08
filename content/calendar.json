@@ -992,6 +992,67 @@
           "url": "marginvps.com"
         }
       ]
+    },
+    {
+      "id": "day-18",
+      "day_number": 18,
+      "date": "2026-11-08",
+      "pillar": "Tips",
+      "topic": "5 signs your EAs have outgrown your home PC",
+      "caption": "How many of these sound familiar? 🖥️😬\n\n1. Your PC sleeps, updates or reboots overnight\n2. Your Wi-Fi drops mid-session\n3. You can't trade when your computer is off\n4. Your orders take 100–300ms+ to reach your broker\n5. You're juggling several accounts on one machine\n\nIf you counted 2 or more, your strategy has outgrown your desk. On MarginVPS your EAs run 24/7, co-located with your broker at <1ms, on a 99.99% uptime SLA. Every plan has a 14-day money-back guarantee.\n\nDrop your score below 👇\n\n#ForexVPS #AlgoTrading #ExpertAdvisor #MT4 #MT5 #ForexTrading #TradingTips #MarginVPS",
+      "status": "approved",
+      "render": true,
+      "slides": [
+        {
+          "kind": "cover",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "1 / 5",
+          "headline": "5 signs your EAs have <span class=\"accent\">outgrown</span> your home PC",
+          "sub": "How many sound familiar?"
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "2 / 5",
+          "headline": "Signs 1–3",
+          "body_type": "list",
+          "list_items": [
+            "Your PC sleeps, updates or reboots overnight",
+            "Your Wi-Fi drops mid-session",
+            "You can't trade when your computer is off"
+          ]
+        },
+        {
+          "kind": "content",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "3 / 5",
+          "headline": "Signs 4–5",
+          "list_start": 4,
+          "body_type": "list",
+          "list_items": [
+            "Orders take 100–300ms+ to reach your broker",
+            "You're juggling several accounts on one machine"
+          ]
+        },
+        {
+          "kind": "stat",
+          "pillar_label": "VPS TIP",
+          "badge_color": "mintlight",
+          "pager": "4 / 5",
+          "stat_number": "&lt;1ms",
+          "stat_label": "CO-LOCATED WITH YOUR BROKER",
+          "stat_context": "99.99% uptime SLA, terminals auto-start with Windows, ready in under 60 seconds."
+        },
+        {
+          "kind": "cta",
+          "tagline": "Try it risk-free with a 14-day money-back guarantee.",
+          "button_text": "Get Started",
+          "url": "marginvps.com"
+        }
+      ]
     }
   ]
 }

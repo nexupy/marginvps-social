@@ -66,9 +66,10 @@ def render_content(slide):
         )
         body = f'<div class="rows">{rows}</div>'
     else:
+        # list_start lets a list continue its numbering from a previous slide
         items = "\n".join(
-            f'<div class="list-item"><span class="num">{i+1:02d}</span><span>{item}</span></div>'
-            for i, item in enumerate(slide["list_items"])
+            f'<div class="list-item"><span class="num">{i:02d}</span><span>{item}</span></div>'
+            for i, item in enumerate(slide["list_items"], start=slide.get("list_start", 1))
         )
         body = f'<div class="list">{items}</div>'
 
